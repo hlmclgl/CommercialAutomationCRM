@@ -109,40 +109,40 @@
     <Compile Include="Form1.Designer.cs">
       <DependentUpon>Form1.cs</DependentUpon>
     </Compile>
-    <Compile Include="Formlar\FrmDepartments.cs">
+    <Compile Include="Forms\FrmDepartments.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Formlar\FrmDepartments.Designer.cs">
+    <Compile Include="Forms\FrmDepartments.Designer.cs">
       <DependentUpon>FrmDepartments.cs</DependentUpon>
     </Compile>
-    <Compile Include="Formlar\FrmStaffs.cs">
+    <Compile Include="Forms\FrmStaffs.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Formlar\FrmStaffs.Designer.cs">
+    <Compile Include="Forms\FrmStaffs.Designer.cs">
       <DependentUpon>FrmStaffs.cs</DependentUpon>
     </Compile>
-    <Compile Include="Formlar\FrmStaffStatistics.cs">
+    <Compile Include="Forms\FrmStaffStatistics.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Formlar\FrmStaffStatistics.Designer.cs">
+    <Compile Include="Forms\FrmStaffStatistics.Designer.cs">
       <DependentUpon>FrmStaffStatistics.cs</DependentUpon>
     </Compile>
-    <Compile Include="Formlar\FrmTask.cs">
+    <Compile Include="Forms\FrmTask.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Formlar\FrmTask.Designer.cs">
+    <Compile Include="Forms\FrmTask.Designer.cs">
       <DependentUpon>FrmTask.cs</DependentUpon>
     </Compile>
-    <Compile Include="Formlar\FrmTaskDetail.cs">
+    <Compile Include="Forms\FrmTaskDetail.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Formlar\FrmTaskDetail.Designer.cs">
+    <Compile Include="Forms\FrmTaskDetail.Designer.cs">
       <DependentUpon>FrmTaskDetail.cs</DependentUpon>
     </Compile>
-    <Compile Include="Formlar\FrmTaskList.cs">
+    <Compile Include="Forms\FrmTaskList.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Formlar\FrmTaskList.Designer.cs">
+    <Compile Include="Forms\FrmTaskList.Designer.cs">
       <DependentUpon>FrmTaskList.cs</DependentUpon>
     </Compile>
     <Compile Include="Program.cs" />
@@ -150,22 +150,22 @@
     <EmbeddedResource Include="Form1.resx">
       <DependentUpon>Form1.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Formlar\FrmDepartments.resx">
+    <EmbeddedResource Include="Forms\FrmDepartments.resx">
       <DependentUpon>FrmDepartments.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Formlar\FrmStaffs.resx">
+    <EmbeddedResource Include="Forms\FrmStaffs.resx">
       <DependentUpon>FrmStaffs.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Formlar\FrmStaffStatistics.resx">
+    <EmbeddedResource Include="Forms\FrmStaffStatistics.resx">
       <DependentUpon>FrmStaffStatistics.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Formlar\FrmTask.resx">
+    <EmbeddedResource Include="Forms\FrmTask.resx">
       <DependentUpon>FrmTask.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Formlar\FrmTaskDetail.resx">
+    <EmbeddedResource Include="Forms\FrmTaskDetail.resx">
       <DependentUpon>FrmTaskDetail.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Formlar\FrmTaskList.resx">
+    <EmbeddedResource Include="Forms\FrmTaskList.resx">
       <DependentUpon>FrmTaskList.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\licenses.licx" />

@@ -73,9 +73,10 @@ namespace servis_project
             
         }
 
+        
         private void btnNewTask_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
         {
-            Formlar.FrmTask frmTask = new Formlar.FrmTask();
+            Forms.FrmTask frmTask = new Forms.FrmTask();
             frmTask.Show();
         }
 

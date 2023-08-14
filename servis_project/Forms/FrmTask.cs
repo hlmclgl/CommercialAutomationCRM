@@ -10,7 +10,7 @@ using servis_project.Entity;
 using System.Windows.Forms;
 using DevExpress.XtraEditors;
 
-namespace servis_project.Formlar
+namespace servis_project.Forms
 {
     public partial class FrmTask : Form
     {

@@ -1,4 +1,4 @@
-﻿namespace servis_project.Formlar
+﻿namespace servis_project.Forms
 {
     partial class FrmTask
     {

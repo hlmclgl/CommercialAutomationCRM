@@ -85,5 +85,16 @@ namespace servis_project
             Formlar.FrmTaskDetail frm = new Formlar.FrmTaskDetail();
             frm.Show();
         }
+
+        Forms.FrmHomePage frm5;
+        private void btnHomePage_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
+        {
+            if (frm5 == null || frm5.IsDisposed)
+            {
+                frm5 = new Forms.FrmHomePage();
+                frm5.MdiParent = this;
+                frm5.Show();
+            }
+        }
     }
 }

@@ -13,6 +13,17 @@
           <Property Name="User" Type="nvarchar" MaxLength="10" />
           <Property Name="Password" Type="nvarchar" MaxLength="20" />
         </EntityType>
+        <EntityType Name="TblCalls">
+          <Key>
+            <PropertyRef Name="ID" />
+          </Key>
+          <Property Name="ID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="CallFirm" Type="int" />
+          <Property Name="Issue" Type="nvarchar" MaxLength="50" />
+          <Property Name="Description" Type="nvarchar(max)" />
+          <Property Name="Status" Type="bit" />
+          <Property Name="Date" Type="date" />
+        </EntityType>
         <EntityType Name="TblDepartments">
           <Key>
             <PropertyRef Name="ID" />
@@ -68,6 +79,18 @@
           <Property Name="Status" Type="bit" />
           <Property Name="Date" Type="date" />
         </EntityType>
+        <Association Name="FK_TblCalls_TblFirms">
+          <End Role="TblFirms" Type="Self.TblFirms" Multiplicity="0..1" />
+          <End Role="TblCalls" Type="Self.TblCalls" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="TblFirms">
+              <PropertyRef Name="ID" />
+            </Principal>
+            <Dependent Role="TblCalls">
+              <PropertyRef Name="CallFirm" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
         <Association Name="FK_TblStaffs_TblDepartments">
           <End Role="TblDepartments" Type="Self.TblDepartments" Multiplicity="0..1" />
           <End Role="TblStaffs" Type="Self.TblStaffs" Multiplicity="*" />
@@ -118,11 +141,16 @@
         </Association>
         <EntityContainer Name="DbServisModelStoreContainer">
           <EntitySet Name="TblAdmin" EntityType="Self.TblAdmin" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="TblCalls" EntityType="Self.TblCalls" Schema="dbo" store:Type="Tables" />
           <EntitySet Name="TblDepartments" EntityType="Self.TblDepartments" Schema="dbo" store:Type="Tables" />
           <EntitySet Name="TblFirms" EntityType="Self.TblFirms" Schema="dbo" store:Type="Tables" />
           <EntitySet Name="TblStaffs" EntityType="Self.TblStaffs" Schema="dbo" store:Type="Tables" />
           <EntitySet Name="TblTaskDetails" EntityType="Self.TblTaskDetails" Schema="dbo" store:Type="Tables" />
           <EntitySet Name="TblTasks" EntityType="Self.TblTasks" Schema="dbo" store:Type="Tables" />
+          <AssociationSet Name="FK_TblCalls_TblFirms" Association="Self.FK_TblCalls_TblFirms">
+            <End Role="TblFirms" EntitySet="TblFirms" />
+            <End Role="TblCalls" EntitySet="TblCalls" />
+          </AssociationSet>
           <AssociationSet Name="FK_TblStaffs_TblDepartments" Association="Self.FK_TblStaffs_TblDepartments">
             <End Role="TblDepartments" EntitySet="TblDepartments" />
             <End Role="TblStaffs" EntitySet="TblStaffs" />
@@ -173,6 +201,7 @@
           <Property Name="City" Type="String" MaxLength="30" FixedLength="false" Unicode="true" />
           <Property Name="Town" Type="String" MaxLength="30" FixedLength="false" Unicode="true" />
           <Property Name="Address" Type="String" MaxLength="200" FixedLength="false" Unicode="true" />
+          <NavigationProperty Name="TblCalls" Relationship="DbServisModel.FK_TblCalls_TblFirms" FromRole="TblFirms" ToRole="TblCalls" />
         </EntityType>
         <EntityType Name="TblStaffs">
           <Key>
@@ -286,7 +315,36 @@
             <End Role="TblTasks" EntitySet="TblTasks" />
             <End Role="TblTaskDetails" EntitySet="TblTaskDetails" />
           </AssociationSet>
+          <EntitySet Name="TblCalls" EntityType="DbServisModel.TblCalls" />
+          <AssociationSet Name="FK_TblCalls_TblFirms" Association="DbServisModel.FK_TblCalls_TblFirms">
+            <End Role="TblFirms" EntitySet="TblFirms" />
+            <End Role="TblCalls" EntitySet="TblCalls" />
+          </AssociationSet>
         </EntityContainer>
+        <EntityType Name="TblCalls">
+          <Key>
+            <PropertyRef Name="ID" />
+          </Key>
+          <Property Name="ID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="CallFirm" Type="Int32" />
+          <Property Name="Issue" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="Description" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="Date" Type="DateTime" Precision="0" />
+          <NavigationProperty Name="TblFirms" Relationship="DbServisModel.FK_TblCalls_TblFirms" FromRole="TblCalls" ToRole="TblFirms" />
+          <Property Name="Status" Type="Boolean" />
+        </EntityType>
+        <Association Name="FK_TblCalls_TblFirms">
+          <End Type="DbServisModel.TblFirms" Role="TblFirms" Multiplicity="0..1" />
+          <End Type="DbServisModel.TblCalls" Role="TblCalls" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="TblFirms">
+              <PropertyRef Name="ID" />
+            </Principal>
+            <Dependent Role="TblCalls">
+              <PropertyRef Name="CallFirm" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
       </Schema>
     </edmx:ConceptualModels>
     <!-- C-S mapping content -->
@@ -359,6 +417,18 @@
                 <ScalarProperty Name="TaskTaker" ColumnName="TaskTaker" />
                 <ScalarProperty Name="Description" ColumnName="Description" />
                 <ScalarProperty Name="Date" ColumnName="Date" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="TblCalls">
+            <EntityTypeMapping TypeName="DbServisModel.TblCalls">
+              <MappingFragment StoreEntitySet="TblCalls">
+                <ScalarProperty Name="Status" ColumnName="Status" />
+                <ScalarProperty Name="Date" ColumnName="Date" />
+                <ScalarProperty Name="Description" ColumnName="Description" />
+                <ScalarProperty Name="Issue" ColumnName="Issue" />
+                <ScalarProperty Name="CallFirm" ColumnName="CallFirm" />
+                <ScalarProperty Name="ID" ColumnName="ID" />
               </MappingFragment>
             </EntityTypeMapping>
           </EntitySetMapping>

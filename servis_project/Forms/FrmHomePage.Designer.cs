@@ -28,6 +28,8 @@
         /// </summary>
         private void InitializeComponent()
         {
+            DevExpress.XtraCharts.Series series1 = new DevExpress.XtraCharts.Series();
+            DevExpress.XtraCharts.PieSeriesView pieSeriesView1 = new DevExpress.XtraCharts.PieSeriesView();
             this.gridControl1 = new DevExpress.XtraGrid.GridControl();
             this.gridView1 = new DevExpress.XtraGrid.Views.Grid.GridView();
             this.groupControl1 = new DevExpress.XtraEditors.GroupControl();
@@ -40,6 +42,11 @@
             this.groupControl3 = new DevExpress.XtraEditors.GroupControl();
             this.gridControl3 = new DevExpress.XtraGrid.GridControl();
             this.gridView3 = new DevExpress.XtraGrid.Views.Grid.GridView();
+            this.groupControl5 = new DevExpress.XtraEditors.GroupControl();
+            this.gridControl5 = new DevExpress.XtraGrid.GridControl();
+            this.gridView5 = new DevExpress.XtraGrid.Views.Grid.GridView();
+            this.groupControl6 = new DevExpress.XtraEditors.GroupControl();
+            this.chartControl1 = new DevExpress.XtraCharts.ChartControl();
             ((System.ComponentModel.ISupportInitialize)(this.gridControl1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.gridView1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.groupControl1)).BeginInit();
@@ -56,6 +63,15 @@
             this.groupControl3.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.gridControl3)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.gridView3)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.groupControl5)).BeginInit();
+            this.groupControl5.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.gridControl5)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.gridView5)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.groupControl6)).BeginInit();
+            this.groupControl6.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.chartControl1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(series1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(pieSeriesView1)).BeginInit();
             this.SuspendLayout();
             // 
             // gridControl1
@@ -143,7 +159,7 @@
             this.groupControl3.Name = "groupControl3";
             this.groupControl3.Size = new System.Drawing.Size(490, 264);
             this.groupControl3.TabIndex = 5;
-            this.groupControl3.Text = "groupControl3";
+            this.groupControl3.Text = "Aktif Çağrılar";
             // 
             // gridControl3
             // 
@@ -160,12 +176,63 @@
             // 
             this.gridView3.GridControl = this.gridControl3;
             this.gridView3.Name = "gridView3";
+            this.gridView3.OptionsView.ShowGroupPanel = false;
+            // 
+            // groupControl5
+            // 
+            this.groupControl5.Controls.Add(this.gridControl5);
+            this.groupControl5.Location = new System.Drawing.Point(990, 0);
+            this.groupControl5.Name = "groupControl5";
+            this.groupControl5.Size = new System.Drawing.Size(490, 265);
+            this.groupControl5.TabIndex = 6;
+            this.groupControl5.Text = "Fihrist";
+            // 
+            // gridControl5
+            // 
+            this.gridControl5.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.gridControl5.Location = new System.Drawing.Point(2, 28);
+            this.gridControl5.MainView = this.gridView5;
+            this.gridControl5.Name = "gridControl5";
+            this.gridControl5.Size = new System.Drawing.Size(486, 235);
+            this.gridControl5.TabIndex = 0;
+            this.gridControl5.ViewCollection.AddRange(new DevExpress.XtraGrid.Views.Base.BaseView[] {
+            this.gridView5});
+            // 
+            // gridView5
+            // 
+            this.gridView5.GridControl = this.gridControl5;
+            this.gridView5.Name = "gridView5";
+            this.gridView5.OptionsView.ShowGroupPanel = false;
+            // 
+            // groupControl6
+            // 
+            this.groupControl6.Controls.Add(this.chartControl1);
+            this.groupControl6.Location = new System.Drawing.Point(990, 271);
+            this.groupControl6.Name = "groupControl6";
+            this.groupControl6.Size = new System.Drawing.Size(490, 264);
+            this.groupControl6.TabIndex = 7;
+            this.groupControl6.Text = "Çağrı Grafiği";
+            // 
+            // chartControl1
+            // 
+            this.chartControl1.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.chartControl1.Location = new System.Drawing.Point(2, 28);
+            this.chartControl1.Name = "chartControl1";
+            this.chartControl1.PaletteName = "Aspect";
+            series1.Name = "Series 1";
+            series1.View = pieSeriesView1;
+            this.chartControl1.SeriesSerializable = new DevExpress.XtraCharts.Series[] {
+        series1};
+            this.chartControl1.Size = new System.Drawing.Size(486, 234);
+            this.chartControl1.TabIndex = 0;
             // 
             // FrmHomePage
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1482, 535);
+            this.Controls.Add(this.groupControl6);
+            this.Controls.Add(this.groupControl5);
             this.Controls.Add(this.groupControl3);
             this.Controls.Add(this.groupControl4);
             this.Controls.Add(this.groupControl1);
@@ -188,6 +255,15 @@
             this.groupControl3.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.gridControl3)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.gridView3)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.groupControl5)).EndInit();
+            this.groupControl5.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.gridControl5)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.gridView5)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.groupControl6)).EndInit();
+            this.groupControl6.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(pieSeriesView1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(series1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.chartControl1)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -206,5 +282,10 @@
         private DevExpress.XtraEditors.GroupControl groupControl3;
         private DevExpress.XtraGrid.GridControl gridControl3;
         private DevExpress.XtraGrid.Views.Grid.GridView gridView3;
+        private DevExpress.XtraEditors.GroupControl groupControl5;
+        private DevExpress.XtraGrid.GridControl gridControl5;
+        private DevExpress.XtraGrid.Views.Grid.GridView gridView5;
+        private DevExpress.XtraEditors.GroupControl groupControl6;
+        private DevExpress.XtraCharts.ChartControl chartControl1;
     }
 }

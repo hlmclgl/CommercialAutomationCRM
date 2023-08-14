@@ -15,6 +15,8 @@
         <AssociationConnector Association="DbServisModel.FK_TblTasks_TblStaffs" ManuallyRouted="false" />
         <AssociationConnector Association="DbServisModel.FK_TblTasks_TblStaffs1" ManuallyRouted="false" />
         <AssociationConnector Association="DbServisModel.FK_TblTaskDetails_TblTasks" ManuallyRouted="false" />
+        <EntityTypeShape EntityType="DbServisModel.TblCalls" Width="1.5" PointX="5" PointY="5.125" />
+        <AssociationConnector Association="DbServisModel.FK_TblCalls_TblFirms" />
       </Diagram>
     </edmx:Diagrams>
   </edmx:Designer>

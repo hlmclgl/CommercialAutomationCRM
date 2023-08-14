@@ -14,6 +14,12 @@ namespace servis_project.Entity
     
     public partial class TblFirms
     {
+        [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2214:DoNotCallOverridableMethodsInConstructors")]
+        public TblFirms()
+        {
+            this.TblCalls = new HashSet<TblCalls>();
+        }
+    
         public int ID { get; set; }
         public string Name { get; set; }
         public string Officer { get; set; }
@@ -23,5 +29,8 @@ namespace servis_project.Entity
         public string City { get; set; }
         public string Town { get; set; }
         public string Address { get; set; }
+    
+        [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
+        public virtual ICollection<TblCalls> TblCalls { get; set; }
     }
 }

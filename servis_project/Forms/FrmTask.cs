@@ -44,7 +44,7 @@ namespace servis_project.Forms
             TblTasks tasks = new TblTasks();
             tasks.Description = txtDesc.Text;
             tasks.Status = true;
-            tasks.TaskGiver = int.Parse(txtTaskGiver.Text);
+            tasks.TaskGiver = 9;
             tasks.Date = DateTime.Parse(txtDate.Text);
             tasks.TaskTaker = int.Parse(lookUpEdit1.EditValue.ToString());
             db.TblTasks.Add(tasks);

@@ -55,6 +55,8 @@
             this.barButtonItem23 = new DevExpress.XtraBars.BarButtonItem();
             this.barButtonItem24 = new DevExpress.XtraBars.BarButtonItem();
             this.barButtonItem25 = new DevExpress.XtraBars.BarButtonItem();
+            this.btnActiveCalls = new DevExpress.XtraBars.BarButtonItem();
+            this.btnPassiveCalls = new DevExpress.XtraBars.BarButtonItem();
             this.ribbonPage1 = new DevExpress.XtraBars.Ribbon.RibbonPage();
             this.ribbonPageGroup1 = new DevExpress.XtraBars.Ribbon.RibbonPageGroup();
             this.ribbonPage2 = new DevExpress.XtraBars.Ribbon.RibbonPage();
@@ -75,6 +77,8 @@
             this.ribbonPageGroup12 = new DevExpress.XtraBars.Ribbon.RibbonPageGroup();
             this.ribbonPage7 = new DevExpress.XtraBars.Ribbon.RibbonPage();
             this.ribbonPageGroup13 = new DevExpress.XtraBars.Ribbon.RibbonPageGroup();
+            this.ribbonPage8 = new DevExpress.XtraBars.Ribbon.RibbonPage();
+            this.ribbonPageGroup14 = new DevExpress.XtraBars.Ribbon.RibbonPageGroup();
             this.xtraTabbedMdiManager2 = new DevExpress.XtraTabbedMdi.XtraTabbedMdiManager(this.components);
             ((System.ComponentModel.ISupportInitialize)(this.ribbonControl1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.xtraTabbedMdiManager2)).BeginInit();
@@ -110,9 +114,11 @@
             this.barButtonItem22,
             this.barButtonItem23,
             this.barButtonItem24,
-            this.barButtonItem25});
+            this.barButtonItem25,
+            this.btnActiveCalls,
+            this.btnPassiveCalls});
             this.ribbonControl1.Location = new System.Drawing.Point(0, 0);
-            this.ribbonControl1.MaxItemId = 26;
+            this.ribbonControl1.MaxItemId = 28;
             this.ribbonControl1.Name = "ribbonControl1";
             this.ribbonControl1.Pages.AddRange(new DevExpress.XtraBars.Ribbon.RibbonPage[] {
             this.ribbonPage1,
@@ -120,6 +126,7 @@
             this.ribbonPage3,
             this.ribbonPage4,
             this.ribbonPage5,
+            this.ribbonPage8,
             this.ribbonPage6,
             this.ribbonPage7});
             this.ribbonControl1.Size = new System.Drawing.Size(1482, 183);
@@ -331,6 +338,23 @@
             this.barButtonItem25.ImageOptions.LargeImage = global::servis_project.Properties.Resources.wizard_32x32;
             this.barButtonItem25.Name = "barButtonItem25";
             // 
+            // btnActiveCalls
+            // 
+            this.btnActiveCalls.Caption = "Aktif  Destek Talepleri";
+            this.btnActiveCalls.Id = 26;
+            this.btnActiveCalls.ImageOptions.Image = global::servis_project.Properties.Resources.support_16x16;
+            this.btnActiveCalls.ImageOptions.LargeImage = global::servis_project.Properties.Resources.support_32x32;
+            this.btnActiveCalls.Name = "btnActiveCalls";
+            this.btnActiveCalls.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.btnActiveCalls_ItemClick);
+            // 
+            // btnPassiveCalls
+            // 
+            this.btnPassiveCalls.Caption = "Tamamlanmış Talepler";
+            this.btnPassiveCalls.Id = 27;
+            this.btnPassiveCalls.ImageOptions.Image = global::servis_project.Properties.Resources.apply_16x161;
+            this.btnPassiveCalls.ImageOptions.LargeImage = global::servis_project.Properties.Resources.apply_32x322;
+            this.btnPassiveCalls.Name = "btnPassiveCalls";
+            // 
             // ribbonPage1
             // 
             this.ribbonPage1.Groups.AddRange(new DevExpress.XtraBars.Ribbon.RibbonPageGroup[] {
@@ -463,6 +487,19 @@
             this.ribbonPageGroup13.ItemLinks.Add(this.barButtonItem25);
             this.ribbonPageGroup13.Name = "ribbonPageGroup13";
             // 
+            // ribbonPage8
+            // 
+            this.ribbonPage8.Groups.AddRange(new DevExpress.XtraBars.Ribbon.RibbonPageGroup[] {
+            this.ribbonPageGroup14});
+            this.ribbonPage8.Name = "ribbonPage8";
+            this.ribbonPage8.Text = "Destek Talepleri";
+            // 
+            // ribbonPageGroup14
+            // 
+            this.ribbonPageGroup14.ItemLinks.Add(this.btnActiveCalls);
+            this.ribbonPageGroup14.ItemLinks.Add(this.btnPassiveCalls);
+            this.ribbonPageGroup14.Name = "ribbonPageGroup14";
+            // 
             // xtraTabbedMdiManager2
             // 
             this.xtraTabbedMdiManager2.MdiParent = this;
@@ -534,6 +571,10 @@
         private DevExpress.XtraBars.Ribbon.RibbonPage ribbonPage7;
         private DevExpress.XtraBars.Ribbon.RibbonPageGroup ribbonPageGroup13;
         private DevExpress.XtraTabbedMdi.XtraTabbedMdiManager xtraTabbedMdiManager2;
+        private DevExpress.XtraBars.BarButtonItem btnActiveCalls;
+        private DevExpress.XtraBars.Ribbon.RibbonPage ribbonPage8;
+        private DevExpress.XtraBars.Ribbon.RibbonPageGroup ribbonPageGroup14;
+        private DevExpress.XtraBars.BarButtonItem btnPassiveCalls;
     }
 }
 

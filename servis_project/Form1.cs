@@ -96,5 +96,16 @@ namespace servis_project
                 frm5.Show();
             }
         }
+
+        Forms.FrmActiveCalls frm6;
+        private void btnActiveCalls_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
+        {
+            if (frm6 == null || frm6.IsDisposed)
+            {
+                frm6 = new Forms.FrmActiveCalls();
+                frm6.MdiParent = this;
+                frm6.Show();
+            }
+        }
     }
 }

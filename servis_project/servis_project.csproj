@@ -112,6 +112,12 @@
     <Compile Include="Form1.Designer.cs">
       <DependentUpon>Form1.cs</DependentUpon>
     </Compile>
+    <Compile Include="Forms\FrmActiveCalls.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\FrmActiveCalls.Designer.cs">
+      <DependentUpon>FrmActiveCalls.cs</DependentUpon>
+    </Compile>
     <Compile Include="Forms\FrmDepartments.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -154,10 +160,43 @@
     <Compile Include="Forms\FrmTaskList.Designer.cs">
       <DependentUpon>FrmTaskList.cs</DependentUpon>
     </Compile>
+    <Compile Include="Login\FrmLogin.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Login\FrmLogin.Designer.cs">
+      <DependentUpon>FrmLogin.cs</DependentUpon>
+    </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="StaffTaskForms\FrmActiveTasks.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="StaffTaskForms\FrmActiveTasks.Designer.cs">
+      <DependentUpon>FrmActiveTasks.cs</DependentUpon>
+    </Compile>
+    <Compile Include="StaffTaskForms\FrmCallList.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="StaffTaskForms\FrmCallList.Designer.cs">
+      <DependentUpon>FrmCallList.cs</DependentUpon>
+    </Compile>
+    <Compile Include="StaffTaskForms\FrmPassiveTasks.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="StaffTaskForms\FrmPassiveTasks.Designer.cs">
+      <DependentUpon>FrmPassiveTasks.cs</DependentUpon>
+    </Compile>
+    <Compile Include="StaffTaskForms\FrmStaffForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="StaffTaskForms\FrmStaffForm.Designer.cs">
+      <DependentUpon>FrmStaffForm.cs</DependentUpon>
+    </Compile>
     <EmbeddedResource Include="Form1.resx">
       <DependentUpon>Form1.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\FrmActiveCalls.resx">
+      <DependentUpon>FrmActiveCalls.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Forms\FrmDepartments.resx">
       <DependentUpon>FrmDepartments.cs</DependentUpon>
@@ -180,6 +219,9 @@
     <EmbeddedResource Include="Forms\FrmTaskList.resx">
       <DependentUpon>FrmTaskList.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Login\FrmLogin.resx">
+      <DependentUpon>FrmLogin.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Properties\licenses.licx" />
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
@@ -191,6 +233,18 @@
       <DependentUpon>Resources.resx</DependentUpon>
       <DesignTime>True</DesignTime>
     </Compile>
+    <EmbeddedResource Include="StaffTaskForms\FrmActiveTasks.resx">
+      <DependentUpon>FrmActiveTasks.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="StaffTaskForms\FrmCallList.resx">
+      <DependentUpon>FrmCallList.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="StaffTaskForms\FrmPassiveTasks.resx">
+      <DependentUpon>FrmPassiveTasks.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="StaffTaskForms\FrmStaffForm.resx">
+      <DependentUpon>FrmStaffForm.cs</DependentUpon>
+    </EmbeddedResource>
     <EntityDeploy Include="Entity\Model1.edmx">
       <Generator>EntityModelCodeGenerator</Generator>
       <LastGenOutput>Model1.Designer.cs</LastGenOutput>
@@ -583,6 +637,20 @@
       <DependentUpon>Model1.edmx</DependentUpon>
       <LastGenOutput>Model1.cs</LastGenOutput>
     </Content>
+    <None Include="Resources\support_16x161.png" />
+    <None Include="Resources\support_32x321.png" />
+    <None Include="Resources\apply_16x162.png" />
+    <None Include="Resources\apply_32x323.png" />
+    <None Include="Resources\task_16x162.png" />
+    <None Include="Resources\task_32x322.png" />
+    <None Include="Resources\edittask_16x162.png" />
+    <None Include="Resources\edittask_32x322.png" />
+    <None Include="Resources\bofileattachment_16x16.png" />
+    <None Include="Resources\bofileattachment_32x32.png" />
+    <None Include="Resources\apply_16x161.png" />
+    <None Include="Resources\apply_32x322.png" />
+    <None Include="Resources\support_16x16.png" />
+    <None Include="Resources\support_32x32.png" />
     <None Include="Resources\cancel_32x321.png" />
   </ItemGroup>
   <ItemGroup>

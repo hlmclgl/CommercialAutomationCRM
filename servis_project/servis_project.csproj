@@ -121,6 +121,12 @@
     <Compile Include="Forms\FrmActiveCalls.Designer.cs">
       <DependentUpon>FrmActiveCalls.cs</DependentUpon>
     </Compile>
+    <Compile Include="Forms\FrmCallAssigment.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\FrmCallAssigment.Designer.cs">
+      <DependentUpon>FrmCallAssigment.cs</DependentUpon>
+    </Compile>
     <Compile Include="Forms\FrmDepartments.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -206,6 +212,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Forms\FrmActiveCalls.resx">
       <DependentUpon>FrmActiveCalls.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\FrmCallAssigment.resx">
+      <DependentUpon>FrmCallAssigment.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Forms\FrmDepartments.resx">
       <DependentUpon>FrmDepartments.cs</DependentUpon>

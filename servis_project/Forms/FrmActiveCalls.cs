@@ -32,10 +32,18 @@ namespace servis_project.Forms
                               x.TblFirms.Phone,
                               x.Issue,
                               x.Description,
+                              x.TblStaffs.FirstName,
                               x.Status,
                               x.Date
                           }).Where(y => y.Status == true).ToList();
             gridControl1.DataSource = values;
+        }
+
+        private void gridView1_DoubleClick(object sender, EventArgs e)
+        {
+            FrmCallAssigment fr = new FrmCallAssigment();
+            fr.id = int.Parse(gridView1.GetFocusedRowCellValue("ID").ToString());
+            fr.Show();
         }
     }
 }

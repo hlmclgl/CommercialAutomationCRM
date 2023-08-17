@@ -19,6 +19,7 @@
         <AssociationConnector Association="DbServisModel.FK_TblCalls_TblFirms" />
         <EntityTypeShape EntityType="DbServisModel.TblCallDetails" Width="1.5" PointX="7.25" PointY="5.375" />
         <AssociationConnector Association="DbServisModel.FK_TblCallDetails_TblCalls" />
+        <AssociationConnector Association="DbServisModel.FK_TblCalls_TblStaffs" />
       </Diagram>
     </edmx:Diagrams>
   </edmx:Designer>

@@ -19,6 +19,7 @@ namespace servis_project.Entity
         {
             this.TblTasks = new HashSet<TblTasks>();
             this.TblTasks1 = new HashSet<TblTasks>();
+            this.TblCalls = new HashSet<TblCalls>();
         }
     
         public int ID { get; set; }
@@ -36,5 +37,7 @@ namespace servis_project.Entity
         public virtual ICollection<TblTasks> TblTasks { get; set; }
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
         public virtual ICollection<TblTasks> TblTasks1 { get; set; }
+        [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
+        public virtual ICollection<TblCalls> TblCalls { get; set; }
     }
 }

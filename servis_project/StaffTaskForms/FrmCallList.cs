@@ -25,6 +25,7 @@ namespace servis_project.StaffTaskForms
             gridControl1.DataSource = (from x in db.TblCalls
                                        select new
                                        {
+                                           x.ID,
                                            x.TblFirms.Name,
                                            x.TblFirms.Phone,
                                            x.TblFirms.Mail,
@@ -33,6 +34,13 @@ namespace servis_project.StaffTaskForms
                                            x.Status
                                        }).Where(y => y.Status == true).ToList();
             gridView1.Columns["Status"].Visible = false;
+        }
+
+        private void gridView1_DoubleClick(object sender, EventArgs e)
+        {
+            FrmCallDetailEntry fr = new FrmCallDetailEntry();
+            fr.id = int.Parse(gridView1.GetFocusedRowCellValue("ID").ToString());
+            fr.Show();
         }
     }
 }

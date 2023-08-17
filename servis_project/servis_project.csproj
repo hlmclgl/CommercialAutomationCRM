@@ -88,6 +88,9 @@
     <Compile Include="Entity\TblAdmin.cs">
       <DependentUpon>Model1.tt</DependentUpon>
     </Compile>
+    <Compile Include="Entity\TblCallDetails.cs">
+      <DependentUpon>Model1.tt</DependentUpon>
+    </Compile>
     <Compile Include="Entity\TblCalls.cs">
       <DependentUpon>Model1.tt</DependentUpon>
     </Compile>
@@ -174,6 +177,12 @@
     <Compile Include="StaffTaskForms\FrmActiveTasks.Designer.cs">
       <DependentUpon>FrmActiveTasks.cs</DependentUpon>
     </Compile>
+    <Compile Include="StaffTaskForms\FrmCallDetailEntry.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="StaffTaskForms\FrmCallDetailEntry.Designer.cs">
+      <DependentUpon>FrmCallDetailEntry.cs</DependentUpon>
+    </Compile>
     <Compile Include="StaffTaskForms\FrmCallList.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -235,6 +244,9 @@
     </Compile>
     <EmbeddedResource Include="StaffTaskForms\FrmActiveTasks.resx">
       <DependentUpon>FrmActiveTasks.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="StaffTaskForms\FrmCallDetailEntry.resx">
+      <DependentUpon>FrmCallDetailEntry.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="StaffTaskForms\FrmCallList.resx">
       <DependentUpon>FrmCallList.cs</DependentUpon>

@@ -14,6 +14,12 @@ namespace servis_project.Entity
     
     public partial class TblCalls
     {
+        [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2214:DoNotCallOverridableMethodsInConstructors")]
+        public TblCalls()
+        {
+            this.TblCallDetails = new HashSet<TblCallDetails>();
+        }
+    
         public int ID { get; set; }
         public Nullable<int> CallFirm { get; set; }
         public string Issue { get; set; }
@@ -22,5 +28,7 @@ namespace servis_project.Entity
         public Nullable<bool> Status { get; set; }
     
         public virtual TblFirms TblFirms { get; set; }
+        [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
+        public virtual ICollection<TblCallDetails> TblCallDetails { get; set; }
     }
 }

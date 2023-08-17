@@ -32,5 +32,6 @@ namespace servis_project.Entity
         public virtual DbSet<TblTaskDetails> TblTaskDetails { get; set; }
         public virtual DbSet<TblTasks> TblTasks { get; set; }
         public virtual DbSet<TblCalls> TblCalls { get; set; }
+        public virtual DbSet<TblCallDetails> TblCallDetails { get; set; }
     }
 }

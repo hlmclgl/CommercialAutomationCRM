@@ -13,6 +13,16 @@
           <Property Name="User" Type="nvarchar" MaxLength="10" />
           <Property Name="Password" Type="nvarchar" MaxLength="20" />
         </EntityType>
+        <EntityType Name="TblCallDetails">
+          <Key>
+            <PropertyRef Name="ID" />
+          </Key>
+          <Property Name="ID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="Call" Type="int" />
+          <Property Name="Description" Type="nvarchar(max)" />
+          <Property Name="Date" Type="date" />
+          <Property Name="Hour" Type="char" MaxLength="5" />
+        </EntityType>
         <EntityType Name="TblCalls">
           <Key>
             <PropertyRef Name="ID" />
@@ -39,11 +49,13 @@
           <Property Name="Name" Type="nvarchar" MaxLength="30" />
           <Property Name="Officer" Type="nvarchar" MaxLength="30" />
           <Property Name="Mail" Type="nvarchar" MaxLength="50" />
+          <Property Name="Password" Type="nvarchar" MaxLength="20" />
           <Property Name="Phone" Type="nvarchar" MaxLength="20" />
           <Property Name="Sector" Type="nvarchar" MaxLength="30" />
           <Property Name="City" Type="nvarchar" MaxLength="30" />
           <Property Name="Town" Type="nvarchar" MaxLength="30" />
           <Property Name="Address" Type="nvarchar" MaxLength="200" />
+          <Property Name="Image" Type="nvarchar" MaxLength="250" />
         </EntityType>
         <EntityType Name="TblStaffs">
           <Key>
@@ -57,6 +69,7 @@
           <Property Name="Image" Type="nvarchar" MaxLength="100" />
           <Property Name="Department" Type="int" />
           <Property Name="Status" Type="bit" />
+          <Property Name="Roles" Type="char" MaxLength="1" />
         </EntityType>
         <EntityType Name="TblTaskDetails">
           <Key>
@@ -79,6 +92,18 @@
           <Property Name="Status" Type="bit" />
           <Property Name="Date" Type="date" />
         </EntityType>
+        <Association Name="FK_TblCallDetails_TblCalls">
+          <End Role="TblCalls" Type="Self.TblCalls" Multiplicity="0..1" />
+          <End Role="TblCallDetails" Type="Self.TblCallDetails" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="TblCalls">
+              <PropertyRef Name="ID" />
+            </Principal>
+            <Dependent Role="TblCallDetails">
+              <PropertyRef Name="Call" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
         <Association Name="FK_TblCalls_TblFirms">
           <End Role="TblFirms" Type="Self.TblFirms" Multiplicity="0..1" />
           <End Role="TblCalls" Type="Self.TblCalls" Multiplicity="*" />
@@ -141,12 +166,17 @@
         </Association>
         <EntityContainer Name="DbServisModelStoreContainer">
           <EntitySet Name="TblAdmin" EntityType="Self.TblAdmin" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="TblCallDetails" EntityType="Self.TblCallDetails" Schema="dbo" store:Type="Tables" />
           <EntitySet Name="TblCalls" EntityType="Self.TblCalls" Schema="dbo" store:Type="Tables" />
           <EntitySet Name="TblDepartments" EntityType="Self.TblDepartments" Schema="dbo" store:Type="Tables" />
           <EntitySet Name="TblFirms" EntityType="Self.TblFirms" Schema="dbo" store:Type="Tables" />
           <EntitySet Name="TblStaffs" EntityType="Self.TblStaffs" Schema="dbo" store:Type="Tables" />
           <EntitySet Name="TblTaskDetails" EntityType="Self.TblTaskDetails" Schema="dbo" store:Type="Tables" />
           <EntitySet Name="TblTasks" EntityType="Self.TblTasks" Schema="dbo" store:Type="Tables" />
+          <AssociationSet Name="FK_TblCallDetails_TblCalls" Association="Self.FK_TblCallDetails_TblCalls">
+            <End Role="TblCalls" EntitySet="TblCalls" />
+            <End Role="TblCallDetails" EntitySet="TblCallDetails" />
+          </AssociationSet>
           <AssociationSet Name="FK_TblCalls_TblFirms" Association="Self.FK_TblCalls_TblFirms">
             <End Role="TblFirms" EntitySet="TblFirms" />
             <End Role="TblCalls" EntitySet="TblCalls" />
@@ -202,6 +232,8 @@
           <Property Name="Town" Type="String" MaxLength="30" FixedLength="false" Unicode="true" />
           <Property Name="Address" Type="String" MaxLength="200" FixedLength="false" Unicode="true" />
           <NavigationProperty Name="TblCalls" Relationship="DbServisModel.FK_TblCalls_TblFirms" FromRole="TblFirms" ToRole="TblCalls" />
+          <Property Name="Password" Type="String" MaxLength="20" FixedLength="false" Unicode="true" />
+          <Property Name="Image" Type="String" MaxLength="250" FixedLength="false" Unicode="true" />
         </EntityType>
         <EntityType Name="TblStaffs">
           <Key>
@@ -218,6 +250,7 @@
           <NavigationProperty Name="TblTasks" Relationship="Self.FK_TblTasks_TblStaffs" FromRole="TblStaffs" ToRole="TblTasks" />
           <NavigationProperty Name="TblTasks1" Relationship="Self.FK_TblTasks_TblStaffs1" FromRole="TblStaffs" ToRole="TblTasks" />
           <Property Name="Status" Type="Boolean" />
+          <Property Name="Roles" Type="String" MaxLength="1" FixedLength="true" Unicode="false" />
         </EntityType>
         <EntityType Name="TblTaskDetails">
           <Key>
@@ -320,6 +353,11 @@
             <End Role="TblFirms" EntitySet="TblFirms" />
             <End Role="TblCalls" EntitySet="TblCalls" />
           </AssociationSet>
+          <EntitySet Name="TblCallDetails" EntityType="DbServisModel.TblCallDetails" />
+          <AssociationSet Name="FK_TblCallDetails_TblCalls" Association="DbServisModel.FK_TblCallDetails_TblCalls">
+            <End Role="TblCalls" EntitySet="TblCalls" />
+            <End Role="TblCallDetails" EntitySet="TblCallDetails" />
+          </AssociationSet>
         </EntityContainer>
         <EntityType Name="TblCalls">
           <Key>
@@ -332,6 +370,7 @@
           <Property Name="Date" Type="DateTime" Precision="0" />
           <NavigationProperty Name="TblFirms" Relationship="DbServisModel.FK_TblCalls_TblFirms" FromRole="TblCalls" ToRole="TblFirms" />
           <Property Name="Status" Type="Boolean" />
+          <NavigationProperty Name="TblCallDetails" Relationship="DbServisModel.FK_TblCallDetails_TblCalls" FromRole="TblCalls" ToRole="TblCallDetails" />
         </EntityType>
         <Association Name="FK_TblCalls_TblFirms">
           <End Type="DbServisModel.TblFirms" Role="TblFirms" Multiplicity="0..1" />
@@ -342,6 +381,29 @@
             </Principal>
             <Dependent Role="TblCalls">
               <PropertyRef Name="CallFirm" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <EntityType Name="TblCallDetails">
+          <Key>
+            <PropertyRef Name="ID" />
+          </Key>
+          <Property Name="ID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="Call" Type="Int32" />
+          <Property Name="Description" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="Date" Type="DateTime" Precision="0" />
+          <Property Name="Hour" Type="String" MaxLength="5" FixedLength="true" Unicode="false" />
+          <NavigationProperty Name="TblCalls" Relationship="DbServisModel.FK_TblCallDetails_TblCalls" FromRole="TblCallDetails" ToRole="TblCalls" />
+        </EntityType>
+        <Association Name="FK_TblCallDetails_TblCalls">
+          <End Type="DbServisModel.TblCalls" Role="TblCalls" Multiplicity="0..1" />
+          <End Type="DbServisModel.TblCallDetails" Role="TblCallDetails" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="TblCalls">
+              <PropertyRef Name="ID" />
+            </Principal>
+            <Dependent Role="TblCallDetails">
+              <PropertyRef Name="Call" />
             </Dependent>
           </ReferentialConstraint>
         </Association>
@@ -371,6 +433,8 @@
           <EntitySetMapping Name="TblFirms">
             <EntityTypeMapping TypeName="DbServisModel.TblFirms">
               <MappingFragment StoreEntitySet="TblFirms">
+                <ScalarProperty Name="Image" ColumnName="Image" />
+                <ScalarProperty Name="Password" ColumnName="Password" />
                 <ScalarProperty Name="ID" ColumnName="ID" />
                 <ScalarProperty Name="Name" ColumnName="Name" />
                 <ScalarProperty Name="Officer" ColumnName="Officer" />
@@ -386,6 +450,7 @@
           <EntitySetMapping Name="TblStaffs">
             <EntityTypeMapping TypeName="DbServisModel.TblStaffs">
               <MappingFragment StoreEntitySet="TblStaffs">
+                <ScalarProperty Name="Roles" ColumnName="Roles" />
                 <ScalarProperty Name="Status" ColumnName="Status" />
                 <ScalarProperty Name="ID" ColumnName="ID" />
                 <ScalarProperty Name="FirstName" ColumnName="FirstName" />
@@ -428,6 +493,17 @@
                 <ScalarProperty Name="Description" ColumnName="Description" />
                 <ScalarProperty Name="Issue" ColumnName="Issue" />
                 <ScalarProperty Name="CallFirm" ColumnName="CallFirm" />
+                <ScalarProperty Name="ID" ColumnName="ID" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="TblCallDetails">
+            <EntityTypeMapping TypeName="DbServisModel.TblCallDetails">
+              <MappingFragment StoreEntitySet="TblCallDetails">
+                <ScalarProperty Name="Hour" ColumnName="Hour" />
+                <ScalarProperty Name="Date" ColumnName="Date" />
+                <ScalarProperty Name="Description" ColumnName="Description" />
+                <ScalarProperty Name="Call" ColumnName="Call" />
                 <ScalarProperty Name="ID" ColumnName="ID" />
               </MappingFragment>
             </EntityTypeMapping>

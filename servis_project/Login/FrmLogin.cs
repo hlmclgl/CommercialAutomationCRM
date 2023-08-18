@@ -28,5 +28,22 @@ namespace servis_project.Login
             StaffTaskForms.FrmStaffForm frm = new StaffTaskForms.FrmStaffForm();
             frm.Show();
         }
+
+        private void FrmLogin_Load(object sender, EventArgs e)
+        {
+
+        }
+
+        private void labelControl1_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        
+
+        private void pictureEdit4_Click(object sender, EventArgs e)
+        {
+            this.Close();
+        }
     }
 }

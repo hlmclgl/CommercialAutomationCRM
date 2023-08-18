@@ -1,4 +1,6 @@
-﻿using System;
+﻿using DevExpress.XtraEditors;
+using servis_project.Entity;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -17,6 +19,8 @@ namespace servis_project.Login
             InitializeComponent();
         }
 
+        DbServisEntities db = new DbServisEntities();
+
         private void button1_Click(object sender, EventArgs e)
         {
             Form1 frm = new Form1();
@@ -34,16 +38,39 @@ namespace servis_project.Login
 
         }
 
-        private void labelControl1_Click(object sender, EventArgs e)
+        private void txtMail_Click(object sender, EventArgs e)
         {
-
+            panel4.BackColor = Color.White;
+            panel3.BackColor = SystemColors.Control;
         }
 
-        
+        private void txtPassword_Click(object sender, EventArgs e)
+        {
+            panel3.BackColor = Color.White;
+            panel4.BackColor = SystemColors.Control;
+        }
 
         private void pictureEdit4_Click(object sender, EventArgs e)
         {
             this.Close();
+        }
+
+        private void btnAdmin_Click(object sender, EventArgs e)
+        {
+            var value = db.TblAdmin.Where(x=>x.User == txtMail.Text && x.Password == txtPassword.Text).FirstOrDefault();
+            if (value != null)
+            {
+                XtraMessageBox.Show("Hoşgeldiniz");
+            }
+            else
+            {
+                XtraMessageBox.Show("Hatalı Kullanıcı Adı veya Şifre");
+            }
+        }
+
+        private void btnStaff_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }

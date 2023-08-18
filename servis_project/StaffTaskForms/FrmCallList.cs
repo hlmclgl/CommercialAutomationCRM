@@ -1,4 +1,5 @@
-﻿using servis_project.Entity;
+﻿using DevExpress.XtraEditors;
+using servis_project.Entity;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -19,9 +20,13 @@ namespace servis_project.StaffTaskForms
         }
 
         DbServisEntities db = new DbServisEntities();
+        public string mail1;
 
         private void FrmCallList_Load(object sender, EventArgs e)
         {
+            var staffid = db.TblStaffs.Where(x => x.Mail == mail1).Select(y => y.ID).FirstOrDefault();
+
+
             gridControl1.DataSource = (from x in db.TblCalls
                                        select new
                                        {
@@ -31,9 +36,20 @@ namespace servis_project.StaffTaskForms
                                            x.TblFirms.Mail,
                                            x.Issue,
                                            x.Description,
-                                           x.Status
-                                       }).Where(y => y.Status == true).ToList();
+                                           x.Status,
+                                           x.CallStaff
+                                       }).Where(y => y.Status == true && 
+                                       y.CallStaff == staffid).ToList();
             gridView1.Columns["Status"].Visible = false;
+            gridView1.Columns["CallStaff"].Visible = false;
+
+
+            int taskcount = gridView1.RowCount;
+
+            if (taskcount == 0)
+            {
+                XtraMessageBox.Show("Adınıza Tanımlanmış Bir Destek Talebi Bulunamadı", "Bilgi", MessageBoxButtons.OK, MessageBoxIcon.Information);
+            }
         }
 
         private void gridView1_DoubleClick(object sender, EventArgs e)

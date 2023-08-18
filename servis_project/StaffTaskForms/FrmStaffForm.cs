@@ -24,6 +24,7 @@ namespace servis_project.StaffTaskForms
             {
                 frm = new StaffTaskForms.FrmActiveTasks();
                 frm.MdiParent = this;
+                frm.mail1 = mail;
                 frm.Show();
             }
         }
@@ -35,6 +36,7 @@ namespace servis_project.StaffTaskForms
             {
                 frm1 = new StaffTaskForms.FrmPassiveTasks();
                 frm1.MdiParent = this;
+                frm1.mail1 = mail;
                 frm1.Show();
             }
         }
@@ -46,8 +48,16 @@ namespace servis_project.StaffTaskForms
             {
                 frm2 = new StaffTaskForms.FrmCallList();
                 frm2.MdiParent = this;
+                frm2.mail1 = mail;
                 frm2.Show();
             }
+        }
+
+        public string mail;
+
+        private void FrmStaffForm_Load(object sender, EventArgs e)
+        {
+
         }
     }
 }

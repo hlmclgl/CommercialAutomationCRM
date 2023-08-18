@@ -60,6 +60,9 @@ namespace servis_project.Login
             var value = db.TblAdmin.Where(x=>x.User == txtMail.Text && x.Password == txtPassword.Text).FirstOrDefault();
             if (value != null)
             {
+                Form1 frm = new Form1();
+                frm.Show();
+                this.Hide();
                 XtraMessageBox.Show("Hoşgeldiniz");
             }
             else
@@ -70,7 +73,19 @@ namespace servis_project.Login
 
         private void btnStaff_Click(object sender, EventArgs e)
         {
-
+            var value = db.TblStaffs.Where(x => x.Mail == txtMail.Text && x.Password == txtPassword.Text).FirstOrDefault();
+            if (value != null)
+            {
+                StaffTaskForms.FrmStaffForm frm = new StaffTaskForms.FrmStaffForm();
+                frm.mail = txtMail.Text;
+                frm.Show();
+                this.Hide();
+                XtraMessageBox.Show("Hoşgeldiniz");
+            }
+            else
+            {
+                XtraMessageBox.Show("Hatalı Kullanıcı Adı veya Şifre");
+            }
         }
     }
 }

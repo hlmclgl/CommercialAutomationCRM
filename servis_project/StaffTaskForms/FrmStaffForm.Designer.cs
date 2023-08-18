@@ -51,7 +51,7 @@
             this.btnPassiveTasks,
             this.btnSupportRequest});
             this.ribbonControl1.Location = new System.Drawing.Point(0, 0);
-            this.ribbonControl1.Margin = new System.Windows.Forms.Padding(5, 5, 5, 5);
+            this.ribbonControl1.Margin = new System.Windows.Forms.Padding(5);
             this.ribbonControl1.MaxItemId = 5;
             this.ribbonControl1.Name = "ribbonControl1";
             this.ribbonControl1.OptionsMenuMinWidth = 515;
@@ -112,7 +112,9 @@
             this.Controls.Add(this.ribbonControl1);
             this.IsMdiContainer = true;
             this.Name = "FrmStaffForm";
-            this.Text = "FrmStaffForm";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
+            this.Text = "Personel Paneli";
+            this.Load += new System.EventHandler(this.FrmStaffForm_Load);
             ((System.ComponentModel.ISupportInitialize)(this.ribbonControl1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.xtraTabbedMdiManager1)).EndInit();
             this.ResumeLayout(false);

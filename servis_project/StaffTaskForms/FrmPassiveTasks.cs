@@ -20,18 +20,21 @@ namespace servis_project.StaffTaskForms
         }
 
         DbServisEntities db = new DbServisEntities();
+        public string mail1;
 
         private void FrmPassiveTasks_Load(object sender, EventArgs e)
         {
+            var staffid = db.TblStaffs.Where(x => x.Mail == mail1).Select(y => y.ID).FirstOrDefault();
+
             var values = (from x in db.TblTasks
                           select new
                           {
                               x.ID,
-                              TaskTaker = x.TblStaffs1.FirstName,
+                              x.TaskTaker,
                               x.Description,
                               x.Status,
                               x.Date
-                          }).Where(x => x.TaskTaker == "Ahmet Hilmi" && x.Status == false).ToList();
+                          }).Where(x => x.TaskTaker == staffid && x.Status == false).ToList();
             gridControl1.DataSource = values;
             //gridView1.Columns["TaskTaker"].Visible = false;
             gridView1.Columns["Status"].Visible = false;

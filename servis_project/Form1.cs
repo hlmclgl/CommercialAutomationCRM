@@ -17,11 +17,16 @@ namespace servis_project
             InitializeComponent();
         }
 
-        
 
+        Forms.FrmHomePage frm7;
         private void Form1_Load(object sender, EventArgs e)
         {
-
+            if (frm7 == null || frm7.IsDisposed)
+            {
+                frm7 = new Forms.FrmHomePage();
+                frm7.MdiParent = this;
+                frm7.Show();
+            }
         }
 
         Formlar.FrmDepartments frm1;
@@ -106,6 +111,12 @@ namespace servis_project
                 frm6.MdiParent = this;
                 frm6.Show();
             }
+        }
+
+        private void btnNewDepartment_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
+        {
+            Forms.FrmAddDepartment frmAddDepartment = new Forms.FrmAddDepartment();
+            frmAddDepartment.Show();
         }
     }
 }

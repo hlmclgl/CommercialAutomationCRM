@@ -56,6 +56,8 @@ namespace servis_project.Formlar
                              x.Name
                          }).ToList();
             gridControl1.DataSource = values;
+            gridView1.Columns["ID"].Visible = false;
+
         }
 
         private void btnList_Click(object sender, EventArgs e)
@@ -100,6 +102,11 @@ namespace servis_project.Formlar
             db.SaveChanges();
             XtraMessageBox.Show("Departman başarılı bir şekilde güncellendi.",
                 "Bilgi", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
+            List();
+        }
+
+        private void FrmDepartments_Load(object sender, EventArgs e)
+        {
             List();
         }
     }

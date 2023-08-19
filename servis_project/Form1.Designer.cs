@@ -32,7 +32,7 @@
             this.ribbonControl1 = new DevExpress.XtraBars.Ribbon.RibbonControl();
             this.btnHomePage = new DevExpress.XtraBars.BarButtonItem();
             this.BtnDepartmentList = new DevExpress.XtraBars.BarButtonItem();
-            this.barButtonItem3 = new DevExpress.XtraBars.BarButtonItem();
+            this.btnNewDepartment = new DevExpress.XtraBars.BarButtonItem();
             this.barButtonItem4 = new DevExpress.XtraBars.BarButtonItem();
             this.barButtonItem5 = new DevExpress.XtraBars.BarButtonItem();
             this.BtnStaffList = new DevExpress.XtraBars.BarButtonItem();
@@ -72,13 +72,13 @@
             this.ribbonPageGroup8 = new DevExpress.XtraBars.Ribbon.RibbonPageGroup();
             this.ribbonPageGroup9 = new DevExpress.XtraBars.Ribbon.RibbonPageGroup();
             this.ribbonPageGroup10 = new DevExpress.XtraBars.Ribbon.RibbonPageGroup();
+            this.ribbonPage8 = new DevExpress.XtraBars.Ribbon.RibbonPage();
+            this.ribbonPageGroup14 = new DevExpress.XtraBars.Ribbon.RibbonPageGroup();
             this.ribbonPage6 = new DevExpress.XtraBars.Ribbon.RibbonPage();
             this.ribbonPageGroup11 = new DevExpress.XtraBars.Ribbon.RibbonPageGroup();
             this.ribbonPageGroup12 = new DevExpress.XtraBars.Ribbon.RibbonPageGroup();
             this.ribbonPage7 = new DevExpress.XtraBars.Ribbon.RibbonPage();
             this.ribbonPageGroup13 = new DevExpress.XtraBars.Ribbon.RibbonPageGroup();
-            this.ribbonPage8 = new DevExpress.XtraBars.Ribbon.RibbonPage();
-            this.ribbonPageGroup14 = new DevExpress.XtraBars.Ribbon.RibbonPageGroup();
             this.xtraTabbedMdiManager2 = new DevExpress.XtraTabbedMdi.XtraTabbedMdiManager(this.components);
             ((System.ComponentModel.ISupportInitialize)(this.ribbonControl1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.xtraTabbedMdiManager2)).BeginInit();
@@ -92,7 +92,7 @@
             this.ribbonControl1.SearchEditItem,
             this.btnHomePage,
             this.BtnDepartmentList,
-            this.barButtonItem3,
+            this.btnNewDepartment,
             this.barButtonItem4,
             this.barButtonItem5,
             this.BtnStaffList,
@@ -149,13 +149,14 @@
             this.BtnDepartmentList.Name = "BtnDepartmentList";
             this.BtnDepartmentList.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.BtnDepartmentList_ItemClick);
             // 
-            // barButtonItem3
+            // btnNewDepartment
             // 
-            this.barButtonItem3.Caption = "Yeni Departman Ekle";
-            this.barButtonItem3.Id = 3;
-            this.barButtonItem3.ImageOptions.Image = global::servis_project.Properties.Resources.add_16x161;
-            this.barButtonItem3.ImageOptions.LargeImage = global::servis_project.Properties.Resources.add_32x321;
-            this.barButtonItem3.Name = "barButtonItem3";
+            this.btnNewDepartment.Caption = "Yeni Departman Ekle";
+            this.btnNewDepartment.Id = 3;
+            this.btnNewDepartment.ImageOptions.Image = global::servis_project.Properties.Resources.add_16x161;
+            this.btnNewDepartment.ImageOptions.LargeImage = global::servis_project.Properties.Resources.add_32x321;
+            this.btnNewDepartment.Name = "btnNewDepartment";
+            this.btnNewDepartment.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.btnNewDepartment_ItemClick);
             // 
             // barButtonItem4
             // 
@@ -378,7 +379,7 @@
             // ribbonPageGroup2
             // 
             this.ribbonPageGroup2.ItemLinks.Add(this.BtnDepartmentList);
-            this.ribbonPageGroup2.ItemLinks.Add(this.barButtonItem3);
+            this.ribbonPageGroup2.ItemLinks.Add(this.btnNewDepartment);
             this.ribbonPageGroup2.Name = "ribbonPageGroup2";
             // 
             // ribbonPageGroup3
@@ -452,6 +453,19 @@
             this.ribbonPageGroup10.ItemLinks.Add(this.btnTaskDetail);
             this.ribbonPageGroup10.Name = "ribbonPageGroup10";
             // 
+            // ribbonPage8
+            // 
+            this.ribbonPage8.Groups.AddRange(new DevExpress.XtraBars.Ribbon.RibbonPageGroup[] {
+            this.ribbonPageGroup14});
+            this.ribbonPage8.Name = "ribbonPage8";
+            this.ribbonPage8.Text = "Destek Talepleri";
+            // 
+            // ribbonPageGroup14
+            // 
+            this.ribbonPageGroup14.ItemLinks.Add(this.btnActiveCalls);
+            this.ribbonPageGroup14.ItemLinks.Add(this.btnPassiveCalls);
+            this.ribbonPageGroup14.Name = "ribbonPageGroup14";
+            // 
             // ribbonPage6
             // 
             this.ribbonPage6.Groups.AddRange(new DevExpress.XtraBars.Ribbon.RibbonPageGroup[] {
@@ -487,19 +501,6 @@
             this.ribbonPageGroup13.ItemLinks.Add(this.barButtonItem25);
             this.ribbonPageGroup13.Name = "ribbonPageGroup13";
             // 
-            // ribbonPage8
-            // 
-            this.ribbonPage8.Groups.AddRange(new DevExpress.XtraBars.Ribbon.RibbonPageGroup[] {
-            this.ribbonPageGroup14});
-            this.ribbonPage8.Name = "ribbonPage8";
-            this.ribbonPage8.Text = "Destek Talepleri";
-            // 
-            // ribbonPageGroup14
-            // 
-            this.ribbonPageGroup14.ItemLinks.Add(this.btnActiveCalls);
-            this.ribbonPageGroup14.ItemLinks.Add(this.btnPassiveCalls);
-            this.ribbonPageGroup14.Name = "ribbonPageGroup14";
-            // 
             // xtraTabbedMdiManager2
             // 
             this.xtraTabbedMdiManager2.MdiParent = this;
@@ -531,7 +532,7 @@
         private DevExpress.XtraBars.BarButtonItem BtnDepartmentList;
         private DevExpress.XtraBars.Ribbon.RibbonPage ribbonPage2;
         private DevExpress.XtraBars.Ribbon.RibbonPageGroup ribbonPageGroup2;
-        private DevExpress.XtraBars.BarButtonItem barButtonItem3;
+        private DevExpress.XtraBars.BarButtonItem btnNewDepartment;
         private DevExpress.XtraBars.BarButtonItem barButtonItem4;
         private DevExpress.XtraBars.Ribbon.RibbonPageGroup ribbonPageGroup3;
         private DevExpress.XtraBars.BarButtonItem barButtonItem5;

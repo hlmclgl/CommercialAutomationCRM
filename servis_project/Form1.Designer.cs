@@ -39,7 +39,7 @@
             this.btnAddStaff = new DevExpress.XtraBars.BarButtonItem();
             this.btnStaffStatistics = new DevExpress.XtraBars.BarButtonItem();
             this.frmList = new DevExpress.XtraBars.BarButtonItem();
-            this.barButtonItem10 = new DevExpress.XtraBars.BarButtonItem();
+            this.btnAddFirm = new DevExpress.XtraBars.BarButtonItem();
             this.barButtonItem11 = new DevExpress.XtraBars.BarButtonItem();
             this.btnTaskList = new DevExpress.XtraBars.BarButtonItem();
             this.btnNewTask = new DevExpress.XtraBars.BarButtonItem();
@@ -47,16 +47,17 @@
             this.btnPassiveTasks = new DevExpress.XtraBars.BarButtonItem();
             this.barButtonItem16 = new DevExpress.XtraBars.BarButtonItem();
             this.btnTaskDetail = new DevExpress.XtraBars.BarButtonItem();
-            this.barButtonItem18 = new DevExpress.XtraBars.BarButtonItem();
-            this.barButtonItem19 = new DevExpress.XtraBars.BarButtonItem();
+            this.btnCalc = new DevExpress.XtraBars.BarButtonItem();
+            this.btnYoutube = new DevExpress.XtraBars.BarButtonItem();
             this.barButtonItem20 = new DevExpress.XtraBars.BarButtonItem();
-            this.barButtonItem21 = new DevExpress.XtraBars.BarButtonItem();
-            this.barButtonItem22 = new DevExpress.XtraBars.BarButtonItem();
+            this.btnCurrency = new DevExpress.XtraBars.BarButtonItem();
+            this.btnMaps = new DevExpress.XtraBars.BarButtonItem();
             this.barButtonItem23 = new DevExpress.XtraBars.BarButtonItem();
             this.barButtonItem24 = new DevExpress.XtraBars.BarButtonItem();
             this.barButtonItem25 = new DevExpress.XtraBars.BarButtonItem();
             this.btnActiveCalls = new DevExpress.XtraBars.BarButtonItem();
             this.btnPassiveCalls = new DevExpress.XtraBars.BarButtonItem();
+            this.btnCalendar = new DevExpress.XtraBars.BarButtonItem();
             this.ribbonPage1 = new DevExpress.XtraBars.Ribbon.RibbonPage();
             this.ribbonPageGroup1 = new DevExpress.XtraBars.Ribbon.RibbonPageGroup();
             this.ribbonPage2 = new DevExpress.XtraBars.Ribbon.RibbonPage();
@@ -99,7 +100,7 @@
             this.btnAddStaff,
             this.btnStaffStatistics,
             this.frmList,
-            this.barButtonItem10,
+            this.btnAddFirm,
             this.barButtonItem11,
             this.btnTaskList,
             this.btnNewTask,
@@ -107,18 +108,19 @@
             this.btnPassiveTasks,
             this.barButtonItem16,
             this.btnTaskDetail,
-            this.barButtonItem18,
-            this.barButtonItem19,
+            this.btnCalc,
+            this.btnYoutube,
             this.barButtonItem20,
-            this.barButtonItem21,
-            this.barButtonItem22,
+            this.btnCurrency,
+            this.btnMaps,
             this.barButtonItem23,
             this.barButtonItem24,
             this.barButtonItem25,
             this.btnActiveCalls,
-            this.btnPassiveCalls});
+            this.btnPassiveCalls,
+            this.btnCalendar});
             this.ribbonControl1.Location = new System.Drawing.Point(0, 0);
-            this.ribbonControl1.MaxItemId = 28;
+            this.ribbonControl1.MaxItemId = 29;
             this.ribbonControl1.Name = "ribbonControl1";
             this.ribbonControl1.Pages.AddRange(new DevExpress.XtraBars.Ribbon.RibbonPage[] {
             this.ribbonPage1,
@@ -210,13 +212,14 @@
             this.frmList.Name = "frmList";
             this.frmList.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.frmList_ItemClick);
             // 
-            // barButtonItem10
+            // btnAddFirm
             // 
-            this.barButtonItem10.Caption = "Yeni Firma Ekle";
-            this.barButtonItem10.Id = 10;
-            this.barButtonItem10.ImageOptions.Image = global::servis_project.Properties.Resources.newcontact_16x16;
-            this.barButtonItem10.ImageOptions.LargeImage = global::servis_project.Properties.Resources.newcontact_32x32;
-            this.barButtonItem10.Name = "barButtonItem10";
+            this.btnAddFirm.Caption = "Yeni Firma Ekle";
+            this.btnAddFirm.Id = 10;
+            this.btnAddFirm.ImageOptions.Image = global::servis_project.Properties.Resources.newcontact_16x16;
+            this.btnAddFirm.ImageOptions.LargeImage = global::servis_project.Properties.Resources.newcontact_32x32;
+            this.btnAddFirm.Name = "btnAddFirm";
+            this.btnAddFirm.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.btnAddFirm_ItemClick);
             // 
             // barButtonItem11
             // 
@@ -279,21 +282,23 @@
             this.btnTaskDetail.Name = "btnTaskDetail";
             this.btnTaskDetail.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.btnTaskDetail_ItemClick);
             // 
-            // barButtonItem18
+            // btnCalc
             // 
-            this.barButtonItem18.Caption = "Hesap Makinesi";
-            this.barButtonItem18.Id = 18;
-            this.barButtonItem18.ImageOptions.Image = global::servis_project.Properties.Resources.calculationoptions_16x16;
-            this.barButtonItem18.ImageOptions.LargeImage = global::servis_project.Properties.Resources.calculationoptions_32x32;
-            this.barButtonItem18.Name = "barButtonItem18";
+            this.btnCalc.Caption = "Hesap Makinesi";
+            this.btnCalc.Id = 18;
+            this.btnCalc.ImageOptions.Image = global::servis_project.Properties.Resources.calculationoptions_16x16;
+            this.btnCalc.ImageOptions.LargeImage = global::servis_project.Properties.Resources.calculationoptions_32x32;
+            this.btnCalc.Name = "btnCalc";
+            this.btnCalc.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.btnCalc_ItemClick);
             // 
-            // barButtonItem19
+            // btnYoutube
             // 
-            this.barButtonItem19.Caption = "Youtube";
-            this.barButtonItem19.Id = 19;
-            this.barButtonItem19.ImageOptions.Image = global::servis_project.Properties.Resources.youtube_16x16;
-            this.barButtonItem19.ImageOptions.LargeImage = global::servis_project.Properties.Resources.youtube_32x32;
-            this.barButtonItem19.Name = "barButtonItem19";
+            this.btnYoutube.Caption = "Youtube";
+            this.btnYoutube.Id = 19;
+            this.btnYoutube.ImageOptions.Image = global::servis_project.Properties.Resources.youtube_16x16;
+            this.btnYoutube.ImageOptions.LargeImage = global::servis_project.Properties.Resources.youtube_32x32;
+            this.btnYoutube.Name = "btnYoutube";
+            this.btnYoutube.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.btnYoutube_ItemClick);
             // 
             // barButtonItem20
             // 
@@ -303,21 +308,23 @@
             this.barButtonItem20.ImageOptions.LargeImage = global::servis_project.Properties.Resources.news_32x32;
             this.barButtonItem20.Name = "barButtonItem20";
             // 
-            // barButtonItem21
+            // btnCurrency
             // 
-            this.barButtonItem21.Caption = "Kurlar";
-            this.barButtonItem21.Id = 21;
-            this.barButtonItem21.ImageOptions.Image = global::servis_project.Properties.Resources.currency_16x163;
-            this.barButtonItem21.ImageOptions.LargeImage = global::servis_project.Properties.Resources.currency_32x323;
-            this.barButtonItem21.Name = "barButtonItem21";
+            this.btnCurrency.Caption = "Kurlar";
+            this.btnCurrency.Id = 21;
+            this.btnCurrency.ImageOptions.Image = global::servis_project.Properties.Resources.currency_16x163;
+            this.btnCurrency.ImageOptions.LargeImage = global::servis_project.Properties.Resources.currency_32x323;
+            this.btnCurrency.Name = "btnCurrency";
+            this.btnCurrency.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.btnCurrency_ItemClick);
             // 
-            // barButtonItem22
+            // btnMaps
             // 
-            this.barButtonItem22.Caption = "Haritalar";
-            this.barButtonItem22.Id = 22;
-            this.barButtonItem22.ImageOptions.Image = global::servis_project.Properties.Resources.geopointmap_16x16;
-            this.barButtonItem22.ImageOptions.LargeImage = global::servis_project.Properties.Resources.geopointmap_32x32;
-            this.barButtonItem22.Name = "barButtonItem22";
+            this.btnMaps.Caption = "Haritalar";
+            this.btnMaps.Id = 22;
+            this.btnMaps.ImageOptions.Image = global::servis_project.Properties.Resources.geopointmap_16x16;
+            this.btnMaps.ImageOptions.LargeImage = global::servis_project.Properties.Resources.geopointmap_32x32;
+            this.btnMaps.Name = "btnMaps";
+            this.btnMaps.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.btnMaps_ItemClick);
             // 
             // barButtonItem23
             // 
@@ -360,6 +367,15 @@
             this.btnPassiveCalls.ImageOptions.LargeImage = global::servis_project.Properties.Resources.apply_32x322;
             this.btnPassiveCalls.Name = "btnPassiveCalls";
             this.btnPassiveCalls.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.btnPassiveCalls_ItemClick);
+            // 
+            // btnCalendar
+            // 
+            this.btnCalendar.Caption = "Takvim";
+            this.btnCalendar.Id = 28;
+            this.btnCalendar.ImageOptions.Image = global::servis_project.Properties.Resources.today_16x161;
+            this.btnCalendar.ImageOptions.LargeImage = global::servis_project.Properties.Resources.today_32x321;
+            this.btnCalendar.Name = "btnCalendar";
+            this.btnCalendar.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.btnCalendar_ItemClick);
             // 
             // ribbonPage1
             // 
@@ -423,7 +439,7 @@
             // ribbonPageGroup6
             // 
             this.ribbonPageGroup6.ItemLinks.Add(this.frmList);
-            this.ribbonPageGroup6.ItemLinks.Add(this.barButtonItem10);
+            this.ribbonPageGroup6.ItemLinks.Add(this.btnAddFirm);
             this.ribbonPageGroup6.Name = "ribbonPageGroup6";
             // 
             // ribbonPageGroup7
@@ -481,11 +497,12 @@
             // 
             // ribbonPageGroup11
             // 
-            this.ribbonPageGroup11.ItemLinks.Add(this.barButtonItem18);
-            this.ribbonPageGroup11.ItemLinks.Add(this.barButtonItem19);
+            this.ribbonPageGroup11.ItemLinks.Add(this.btnCalc);
+            this.ribbonPageGroup11.ItemLinks.Add(this.btnYoutube);
             this.ribbonPageGroup11.ItemLinks.Add(this.barButtonItem20);
-            this.ribbonPageGroup11.ItemLinks.Add(this.barButtonItem21);
-            this.ribbonPageGroup11.ItemLinks.Add(this.barButtonItem22);
+            this.ribbonPageGroup11.ItemLinks.Add(this.btnCurrency);
+            this.ribbonPageGroup11.ItemLinks.Add(this.btnMaps);
+            this.ribbonPageGroup11.ItemLinks.Add(this.btnCalendar);
             this.ribbonPageGroup11.Name = "ribbonPageGroup11";
             // 
             // ribbonPageGroup12
@@ -550,7 +567,7 @@
         private DevExpress.XtraBars.BarButtonItem frmList;
         private DevExpress.XtraBars.Ribbon.RibbonPage ribbonPage4;
         private DevExpress.XtraBars.Ribbon.RibbonPageGroup ribbonPageGroup6;
-        private DevExpress.XtraBars.BarButtonItem barButtonItem10;
+        private DevExpress.XtraBars.BarButtonItem btnAddFirm;
         private DevExpress.XtraBars.BarButtonItem barButtonItem11;
         private DevExpress.XtraBars.Ribbon.RibbonPageGroup ribbonPageGroup7;
         private DevExpress.XtraBars.BarButtonItem btnTaskList;
@@ -563,13 +580,13 @@
         private DevExpress.XtraBars.BarButtonItem barButtonItem16;
         private DevExpress.XtraBars.BarButtonItem btnTaskDetail;
         private DevExpress.XtraBars.Ribbon.RibbonPageGroup ribbonPageGroup10;
-        private DevExpress.XtraBars.BarButtonItem barButtonItem18;
+        private DevExpress.XtraBars.BarButtonItem btnCalc;
         private DevExpress.XtraBars.Ribbon.RibbonPage ribbonPage6;
         private DevExpress.XtraBars.Ribbon.RibbonPageGroup ribbonPageGroup11;
-        private DevExpress.XtraBars.BarButtonItem barButtonItem19;
+        private DevExpress.XtraBars.BarButtonItem btnYoutube;
         private DevExpress.XtraBars.BarButtonItem barButtonItem20;
-        private DevExpress.XtraBars.BarButtonItem barButtonItem21;
-        private DevExpress.XtraBars.BarButtonItem barButtonItem22;
+        private DevExpress.XtraBars.BarButtonItem btnCurrency;
+        private DevExpress.XtraBars.BarButtonItem btnMaps;
         private DevExpress.XtraBars.BarButtonItem barButtonItem23;
         private DevExpress.XtraBars.Ribbon.RibbonPageGroup ribbonPageGroup12;
         private DevExpress.XtraBars.BarButtonItem barButtonItem24;
@@ -581,6 +598,7 @@
         private DevExpress.XtraBars.Ribbon.RibbonPage ribbonPage8;
         private DevExpress.XtraBars.Ribbon.RibbonPageGroup ribbonPageGroup14;
         private DevExpress.XtraBars.BarButtonItem btnPassiveCalls;
+        private DevExpress.XtraBars.BarButtonItem btnCalendar;
     }
 }
 

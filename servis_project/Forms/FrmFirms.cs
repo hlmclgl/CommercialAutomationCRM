@@ -52,6 +52,7 @@ namespace servis_project.Forms
             f.Name = txtName.Text;
             f.Officer = txtOfficer.Text;
             f.Sector = txtSector.Text;
+            f.Image = "test";
             f.Mail = txtMail.Text;
             f.Phone = txtPhone.Text;
             f.City = txtCity.Text;

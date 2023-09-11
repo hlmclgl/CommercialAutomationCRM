@@ -118,5 +118,45 @@ namespace servis_project
             Forms.FrmAddDepartment frmAddDepartment = new Forms.FrmAddDepartment();
             frmAddDepartment.Show();
         }
+
+        private void btnAddStaff_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
+        {
+            Forms.FrmAddStaff frmAddStaff = new Forms.FrmAddStaff();
+            frmAddStaff.Show();
+        }
+
+        Forms.FrmFirms frm8;
+        private void frmList_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
+        {
+            if (frm8 == null || frm8.IsDisposed)
+            {
+                frm8 = new Forms.FrmFirms();
+                frm8.MdiParent = this;
+                frm8.Show();
+            }
+        }
+
+        Forms.FrmPassiveCalls frm9;
+        private void btnPassiveCalls_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
+        {
+            if (frm9 == null || frm9.IsDisposed)
+            {
+                frm9 = new Forms.FrmPassiveCalls();
+                frm9.MdiParent = this;
+                frm9.Show();
+            }
+        }
+
+        private void btnActiveTasks_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
+        {
+            Forms.FrmActiveTasks frmActiveTasks = new Forms.FrmActiveTasks();
+            frmActiveTasks.Show();
+        }
+
+        private void btnPassiveTasks_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
+        {
+            Forms.FrmPassiveTasks frmPassiveTasks = new Forms.FrmPassiveTasks();
+            frmPassiveTasks.Show();
+        }
     }
 }

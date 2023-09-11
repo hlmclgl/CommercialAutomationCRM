@@ -78,7 +78,6 @@
             this.groupControl1.Name = "groupControl1";
             this.groupControl1.Size = new System.Drawing.Size(463, 537);
             this.groupControl1.TabIndex = 5;
-            this.groupControl1.Paint += new System.Windows.Forms.PaintEventHandler(this.groupControl1_Paint);
             // 
             // btnUpdate
             // 
@@ -132,7 +131,6 @@
             this.labelControl2.Size = new System.Drawing.Size(147, 24);
             this.labelControl2.TabIndex = 3;
             this.labelControl2.Text = "Departman Adı :";
-            this.labelControl2.Click += new System.EventHandler(this.labelControl2_Click);
             // 
             // btnList
             // 
@@ -152,7 +150,6 @@
             this.txtID.Name = "txtID";
             this.txtID.Size = new System.Drawing.Size(269, 22);
             this.txtID.TabIndex = 1;
-            this.txtID.EditValueChanged += new System.EventHandler(this.textEdit1_EditValueChanged);
             // 
             // labelControl1
             // 
@@ -163,7 +160,6 @@
             this.labelControl1.Size = new System.Drawing.Size(140, 24);
             this.labelControl1.TabIndex = 0;
             this.labelControl1.Text = "Departman ID :";
-            this.labelControl1.Click += new System.EventHandler(this.labelControl1_Click);
             // 
             // FrmDepartments
             // 

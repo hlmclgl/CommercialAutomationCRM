@@ -1,6 +1,6 @@
 ﻿namespace servis_project.Forms
 {
-    partial class FrmActiveCalls
+    partial class FrmPassiveCalls
     {
         /// <summary>
         /// Required designer variable.
@@ -41,7 +41,7 @@
             this.gridControl1.MainView = this.gridView1;
             this.gridControl1.Name = "gridControl1";
             this.gridControl1.Size = new System.Drawing.Size(1482, 535);
-            this.gridControl1.TabIndex = 7;
+            this.gridControl1.TabIndex = 8;
             this.gridControl1.ViewCollection.AddRange(new DevExpress.XtraGrid.Views.Base.BaseView[] {
             this.gridView1});
             // 
@@ -50,17 +50,16 @@
             this.gridView1.GridControl = this.gridControl1;
             this.gridView1.Name = "gridView1";
             this.gridView1.OptionsView.ShowGroupPanel = false;
-            this.gridView1.DoubleClick += new System.EventHandler(this.gridView1_DoubleClick);
             // 
-            // FrmActiveCalls
+            // FrmPassiveCalls
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1482, 535);
             this.Controls.Add(this.gridControl1);
-            this.Name = "FrmActiveCalls";
-            this.Text = "Aktif Destek Talepleri";
-            this.Load += new System.EventHandler(this.FrmActiveCalls_Load);
+            this.Name = "FrmPassiveCalls";
+            this.Text = "Tamamlanmış Talepler";
+            this.Load += new System.EventHandler(this.FrmPassiveCalls_Load);
             ((System.ComponentModel.ISupportInitialize)(this.gridControl1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.gridView1)).EndInit();
             this.ResumeLayout(false);

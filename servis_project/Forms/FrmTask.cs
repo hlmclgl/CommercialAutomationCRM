@@ -50,6 +50,8 @@ namespace servis_project.Forms
             db.TblTasks.Add(tasks);
             db.SaveChanges();
             XtraMessageBox.Show("Görev başarılı bir şekilde tanımlandı.", "Bilgi", MessageBoxButtons.OK, MessageBoxIcon.Information);
+            this.Hide();
+
         }
     }
 }

@@ -36,15 +36,15 @@
             this.barButtonItem4 = new DevExpress.XtraBars.BarButtonItem();
             this.barButtonItem5 = new DevExpress.XtraBars.BarButtonItem();
             this.BtnStaffList = new DevExpress.XtraBars.BarButtonItem();
-            this.barButtonItem7 = new DevExpress.XtraBars.BarButtonItem();
+            this.btnAddStaff = new DevExpress.XtraBars.BarButtonItem();
             this.btnStaffStatistics = new DevExpress.XtraBars.BarButtonItem();
-            this.barButtonItem9 = new DevExpress.XtraBars.BarButtonItem();
+            this.frmList = new DevExpress.XtraBars.BarButtonItem();
             this.barButtonItem10 = new DevExpress.XtraBars.BarButtonItem();
             this.barButtonItem11 = new DevExpress.XtraBars.BarButtonItem();
             this.btnTaskList = new DevExpress.XtraBars.BarButtonItem();
             this.btnNewTask = new DevExpress.XtraBars.BarButtonItem();
-            this.barButtonItem14 = new DevExpress.XtraBars.BarButtonItem();
-            this.barButtonItem15 = new DevExpress.XtraBars.BarButtonItem();
+            this.btnActiveTasks = new DevExpress.XtraBars.BarButtonItem();
+            this.btnPassiveTasks = new DevExpress.XtraBars.BarButtonItem();
             this.barButtonItem16 = new DevExpress.XtraBars.BarButtonItem();
             this.btnTaskDetail = new DevExpress.XtraBars.BarButtonItem();
             this.barButtonItem18 = new DevExpress.XtraBars.BarButtonItem();
@@ -96,15 +96,15 @@
             this.barButtonItem4,
             this.barButtonItem5,
             this.BtnStaffList,
-            this.barButtonItem7,
+            this.btnAddStaff,
             this.btnStaffStatistics,
-            this.barButtonItem9,
+            this.frmList,
             this.barButtonItem10,
             this.barButtonItem11,
             this.btnTaskList,
             this.btnNewTask,
-            this.barButtonItem14,
-            this.barButtonItem15,
+            this.btnActiveTasks,
+            this.btnPassiveTasks,
             this.barButtonItem16,
             this.btnTaskDetail,
             this.barButtonItem18,
@@ -183,13 +183,14 @@
             this.BtnStaffList.Name = "BtnStaffList";
             this.BtnStaffList.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.BtnStaffList_ItemClick);
             // 
-            // barButtonItem7
+            // btnAddStaff
             // 
-            this.barButtonItem7.Caption = "Personel Ekle";
-            this.barButtonItem7.Id = 7;
-            this.barButtonItem7.ImageOptions.Image = global::servis_project.Properties.Resources.boemployee_16x16;
-            this.barButtonItem7.ImageOptions.LargeImage = global::servis_project.Properties.Resources.boemployee_32x32;
-            this.barButtonItem7.Name = "barButtonItem7";
+            this.btnAddStaff.Caption = "Personel Ekle";
+            this.btnAddStaff.Id = 7;
+            this.btnAddStaff.ImageOptions.Image = global::servis_project.Properties.Resources.boemployee_16x16;
+            this.btnAddStaff.ImageOptions.LargeImage = global::servis_project.Properties.Resources.boemployee_32x32;
+            this.btnAddStaff.Name = "btnAddStaff";
+            this.btnAddStaff.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.btnAddStaff_ItemClick);
             // 
             // btnStaffStatistics
             // 
@@ -200,13 +201,14 @@
             this.btnStaffStatistics.Name = "btnStaffStatistics";
             this.btnStaffStatistics.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.btnStaffStatistics_ItemClick);
             // 
-            // barButtonItem9
+            // frmList
             // 
-            this.barButtonItem9.Caption = "Firma Listesi";
-            this.barButtonItem9.Id = 9;
-            this.barButtonItem9.ImageOptions.Image = global::servis_project.Properties.Resources.bocontact2_16x16;
-            this.barButtonItem9.ImageOptions.LargeImage = global::servis_project.Properties.Resources.bocontact2_32x32;
-            this.barButtonItem9.Name = "barButtonItem9";
+            this.frmList.Caption = "Firma Listesi";
+            this.frmList.Id = 9;
+            this.frmList.ImageOptions.Image = global::servis_project.Properties.Resources.bocontact2_16x16;
+            this.frmList.ImageOptions.LargeImage = global::servis_project.Properties.Resources.bocontact2_32x32;
+            this.frmList.Name = "frmList";
+            this.frmList.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.frmList_ItemClick);
             // 
             // barButtonItem10
             // 
@@ -242,21 +244,23 @@
             this.btnNewTask.Name = "btnNewTask";
             this.btnNewTask.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.btnNewTask_ItemClick);
             // 
-            // barButtonItem14
+            // btnActiveTasks
             // 
-            this.barButtonItem14.Caption = "Devam Eden Görevler";
-            this.barButtonItem14.Id = 14;
-            this.barButtonItem14.ImageOptions.Image = global::servis_project.Properties.Resources.bopivotchart_16x161;
-            this.barButtonItem14.ImageOptions.LargeImage = global::servis_project.Properties.Resources.bopivotchart_32x321;
-            this.barButtonItem14.Name = "barButtonItem14";
+            this.btnActiveTasks.Caption = "Devam Eden Görevler";
+            this.btnActiveTasks.Id = 14;
+            this.btnActiveTasks.ImageOptions.Image = global::servis_project.Properties.Resources.bopivotchart_16x161;
+            this.btnActiveTasks.ImageOptions.LargeImage = global::servis_project.Properties.Resources.bopivotchart_32x321;
+            this.btnActiveTasks.Name = "btnActiveTasks";
+            this.btnActiveTasks.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.btnActiveTasks_ItemClick);
             // 
-            // barButtonItem15
+            // btnPassiveTasks
             // 
-            this.barButtonItem15.Caption = "Tamamlanan Görevler";
-            this.barButtonItem15.Id = 15;
-            this.barButtonItem15.ImageOptions.Image = global::servis_project.Properties.Resources.apply_16x16;
-            this.barButtonItem15.ImageOptions.LargeImage = global::servis_project.Properties.Resources.apply_32x32;
-            this.barButtonItem15.Name = "barButtonItem15";
+            this.btnPassiveTasks.Caption = "Tamamlanan Görevler";
+            this.btnPassiveTasks.Id = 15;
+            this.btnPassiveTasks.ImageOptions.Image = global::servis_project.Properties.Resources.apply_16x16;
+            this.btnPassiveTasks.ImageOptions.LargeImage = global::servis_project.Properties.Resources.apply_32x32;
+            this.btnPassiveTasks.Name = "btnPassiveTasks";
+            this.btnPassiveTasks.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.btnPassiveTasks_ItemClick);
             // 
             // barButtonItem16
             // 
@@ -355,6 +359,7 @@
             this.btnPassiveCalls.ImageOptions.Image = global::servis_project.Properties.Resources.apply_16x161;
             this.btnPassiveCalls.ImageOptions.LargeImage = global::servis_project.Properties.Resources.apply_32x322;
             this.btnPassiveCalls.Name = "btnPassiveCalls";
+            this.btnPassiveCalls.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.btnPassiveCalls_ItemClick);
             // 
             // ribbonPage1
             // 
@@ -399,7 +404,7 @@
             // ribbonPageGroup4
             // 
             this.ribbonPageGroup4.ItemLinks.Add(this.BtnStaffList);
-            this.ribbonPageGroup4.ItemLinks.Add(this.barButtonItem7);
+            this.ribbonPageGroup4.ItemLinks.Add(this.btnAddStaff);
             this.ribbonPageGroup4.Name = "ribbonPageGroup4";
             // 
             // ribbonPageGroup5
@@ -417,7 +422,7 @@
             // 
             // ribbonPageGroup6
             // 
-            this.ribbonPageGroup6.ItemLinks.Add(this.barButtonItem9);
+            this.ribbonPageGroup6.ItemLinks.Add(this.frmList);
             this.ribbonPageGroup6.ItemLinks.Add(this.barButtonItem10);
             this.ribbonPageGroup6.Name = "ribbonPageGroup6";
             // 
@@ -439,8 +444,8 @@
             // 
             this.ribbonPageGroup8.ItemLinks.Add(this.btnTaskList);
             this.ribbonPageGroup8.ItemLinks.Add(this.btnNewTask);
-            this.ribbonPageGroup8.ItemLinks.Add(this.barButtonItem14);
-            this.ribbonPageGroup8.ItemLinks.Add(this.barButtonItem15);
+            this.ribbonPageGroup8.ItemLinks.Add(this.btnActiveTasks);
+            this.ribbonPageGroup8.ItemLinks.Add(this.btnPassiveTasks);
             this.ribbonPageGroup8.Name = "ribbonPageGroup8";
             // 
             // ribbonPageGroup9
@@ -539,10 +544,10 @@
         private DevExpress.XtraBars.BarButtonItem BtnStaffList;
         private DevExpress.XtraBars.Ribbon.RibbonPage ribbonPage3;
         private DevExpress.XtraBars.Ribbon.RibbonPageGroup ribbonPageGroup4;
-        private DevExpress.XtraBars.BarButtonItem barButtonItem7;
+        private DevExpress.XtraBars.BarButtonItem btnAddStaff;
         private DevExpress.XtraBars.BarButtonItem btnStaffStatistics;
         private DevExpress.XtraBars.Ribbon.RibbonPageGroup ribbonPageGroup5;
-        private DevExpress.XtraBars.BarButtonItem barButtonItem9;
+        private DevExpress.XtraBars.BarButtonItem frmList;
         private DevExpress.XtraBars.Ribbon.RibbonPage ribbonPage4;
         private DevExpress.XtraBars.Ribbon.RibbonPageGroup ribbonPageGroup6;
         private DevExpress.XtraBars.BarButtonItem barButtonItem10;
@@ -552,8 +557,8 @@
         private DevExpress.XtraBars.Ribbon.RibbonPage ribbonPage5;
         private DevExpress.XtraBars.Ribbon.RibbonPageGroup ribbonPageGroup8;
         private DevExpress.XtraBars.BarButtonItem btnNewTask;
-        private DevExpress.XtraBars.BarButtonItem barButtonItem14;
-        private DevExpress.XtraBars.BarButtonItem barButtonItem15;
+        private DevExpress.XtraBars.BarButtonItem btnActiveTasks;
+        private DevExpress.XtraBars.BarButtonItem btnPassiveTasks;
         private DevExpress.XtraBars.Ribbon.RibbonPageGroup ribbonPageGroup9;
         private DevExpress.XtraBars.BarButtonItem barButtonItem16;
         private DevExpress.XtraBars.BarButtonItem btnTaskDetail;

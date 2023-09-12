@@ -48,6 +48,7 @@ namespace servis_project.StaffTaskForms
             db.TblCallDetails.Add(t);
             db.SaveChanges();
             XtraMessageBox.Show("Talep Detayı Sisteme Başarılı Bir Şekilde Eklendi.", "Bilgi", MessageBoxButtons.OK, MessageBoxIcon.Information);
+            this.Hide();
         }
     }
 }

@@ -34,7 +34,7 @@
             this.BtnDepartmentList = new DevExpress.XtraBars.BarButtonItem();
             this.btnNewDepartment = new DevExpress.XtraBars.BarButtonItem();
             this.barButtonItem4 = new DevExpress.XtraBars.BarButtonItem();
-            this.barButtonItem5 = new DevExpress.XtraBars.BarButtonItem();
+            this.btnDpReport = new DevExpress.XtraBars.BarButtonItem();
             this.BtnStaffList = new DevExpress.XtraBars.BarButtonItem();
             this.btnAddStaff = new DevExpress.XtraBars.BarButtonItem();
             this.btnStaffStatistics = new DevExpress.XtraBars.BarButtonItem();
@@ -52,12 +52,15 @@
             this.barButtonItem20 = new DevExpress.XtraBars.BarButtonItem();
             this.btnCurrency = new DevExpress.XtraBars.BarButtonItem();
             this.btnMaps = new DevExpress.XtraBars.BarButtonItem();
-            this.barButtonItem23 = new DevExpress.XtraBars.BarButtonItem();
+            this.btnAccount = new DevExpress.XtraBars.BarButtonItem();
             this.barButtonItem24 = new DevExpress.XtraBars.BarButtonItem();
-            this.barButtonItem25 = new DevExpress.XtraBars.BarButtonItem();
+            this.btnReportWizard = new DevExpress.XtraBars.BarButtonItem();
             this.btnActiveCalls = new DevExpress.XtraBars.BarButtonItem();
             this.btnPassiveCalls = new DevExpress.XtraBars.BarButtonItem();
             this.btnCalendar = new DevExpress.XtraBars.BarButtonItem();
+            this.btnCallReport = new DevExpress.XtraBars.BarButtonItem();
+            this.btnFrmReport = new DevExpress.XtraBars.BarButtonItem();
+            this.btnStfReport = new DevExpress.XtraBars.BarButtonItem();
             this.ribbonPage1 = new DevExpress.XtraBars.Ribbon.RibbonPage();
             this.ribbonPageGroup1 = new DevExpress.XtraBars.Ribbon.RibbonPageGroup();
             this.ribbonPage2 = new DevExpress.XtraBars.Ribbon.RibbonPage();
@@ -75,6 +78,7 @@
             this.ribbonPageGroup10 = new DevExpress.XtraBars.Ribbon.RibbonPageGroup();
             this.ribbonPage8 = new DevExpress.XtraBars.Ribbon.RibbonPage();
             this.ribbonPageGroup14 = new DevExpress.XtraBars.Ribbon.RibbonPageGroup();
+            this.ribbonPageGroup15 = new DevExpress.XtraBars.Ribbon.RibbonPageGroup();
             this.ribbonPage6 = new DevExpress.XtraBars.Ribbon.RibbonPage();
             this.ribbonPageGroup11 = new DevExpress.XtraBars.Ribbon.RibbonPageGroup();
             this.ribbonPageGroup12 = new DevExpress.XtraBars.Ribbon.RibbonPageGroup();
@@ -95,7 +99,7 @@
             this.BtnDepartmentList,
             this.btnNewDepartment,
             this.barButtonItem4,
-            this.barButtonItem5,
+            this.btnDpReport,
             this.BtnStaffList,
             this.btnAddStaff,
             this.btnStaffStatistics,
@@ -113,14 +117,17 @@
             this.barButtonItem20,
             this.btnCurrency,
             this.btnMaps,
-            this.barButtonItem23,
+            this.btnAccount,
             this.barButtonItem24,
-            this.barButtonItem25,
+            this.btnReportWizard,
             this.btnActiveCalls,
             this.btnPassiveCalls,
-            this.btnCalendar});
+            this.btnCalendar,
+            this.btnCallReport,
+            this.btnFrmReport,
+            this.btnStfReport});
             this.ribbonControl1.Location = new System.Drawing.Point(0, 0);
-            this.ribbonControl1.MaxItemId = 29;
+            this.ribbonControl1.MaxItemId = 32;
             this.ribbonControl1.Name = "ribbonControl1";
             this.ribbonControl1.Pages.AddRange(new DevExpress.XtraBars.Ribbon.RibbonPage[] {
             this.ribbonPage1,
@@ -168,13 +175,14 @@
             this.barButtonItem4.ImageOptions.LargeImage = global::servis_project.Properties.Resources.pielabelsdatalabels_32x32;
             this.barButtonItem4.Name = "barButtonItem4";
             // 
-            // barButtonItem5
+            // btnDpReport
             // 
-            this.barButtonItem5.Caption = "Departman Raporları";
-            this.barButtonItem5.Id = 5;
-            this.barButtonItem5.ImageOptions.Image = global::servis_project.Properties.Resources.report_16x16;
-            this.barButtonItem5.ImageOptions.LargeImage = global::servis_project.Properties.Resources.report_32x32;
-            this.barButtonItem5.Name = "barButtonItem5";
+            this.btnDpReport.Caption = "Departman Raporları";
+            this.btnDpReport.Id = 5;
+            this.btnDpReport.ImageOptions.Image = global::servis_project.Properties.Resources.wizard_16x165;
+            this.btnDpReport.ImageOptions.LargeImage = global::servis_project.Properties.Resources.wizard_32x325;
+            this.btnDpReport.Name = "btnDpReport";
+            this.btnDpReport.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.btnDpReport_ItemClick);
             // 
             // BtnStaffList
             // 
@@ -326,13 +334,14 @@
             this.btnMaps.Name = "btnMaps";
             this.btnMaps.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.btnMaps_ItemClick);
             // 
-            // barButtonItem23
+            // btnAccount
             // 
-            this.barButtonItem23.Caption = "Şifre İşlemleri";
-            this.barButtonItem23.Id = 23;
-            this.barButtonItem23.ImageOptions.Image = global::servis_project.Properties.Resources.bopermission_16x16;
-            this.barButtonItem23.ImageOptions.LargeImage = global::servis_project.Properties.Resources.bopermission_32x32;
-            this.barButtonItem23.Name = "barButtonItem23";
+            this.btnAccount.Caption = "Hesap Ayarları";
+            this.btnAccount.Id = 23;
+            this.btnAccount.ImageOptions.Image = global::servis_project.Properties.Resources.bopermission_16x16;
+            this.btnAccount.ImageOptions.LargeImage = global::servis_project.Properties.Resources.bopermission_32x32;
+            this.btnAccount.Name = "btnAccount";
+            this.btnAccount.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.btnAccount_ItemClick);
             // 
             // barButtonItem24
             // 
@@ -342,13 +351,14 @@
             this.barButtonItem24.ImageOptions.LargeImage = global::servis_project.Properties.Resources.bouser_32x321;
             this.barButtonItem24.Name = "barButtonItem24";
             // 
-            // barButtonItem25
+            // btnReportWizard
             // 
-            this.barButtonItem25.Caption = "Rapor Sihirbazı";
-            this.barButtonItem25.Id = 25;
-            this.barButtonItem25.ImageOptions.Image = global::servis_project.Properties.Resources.wizard_16x16;
-            this.barButtonItem25.ImageOptions.LargeImage = global::servis_project.Properties.Resources.wizard_32x32;
-            this.barButtonItem25.Name = "barButtonItem25";
+            this.btnReportWizard.Caption = "Rapor Sihirbazı";
+            this.btnReportWizard.Id = 25;
+            this.btnReportWizard.ImageOptions.Image = global::servis_project.Properties.Resources.wizard_16x162;
+            this.btnReportWizard.ImageOptions.LargeImage = global::servis_project.Properties.Resources.wizard_32x322;
+            this.btnReportWizard.Name = "btnReportWizard";
+            this.btnReportWizard.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.btnReportWizard_ItemClick);
             // 
             // btnActiveCalls
             // 
@@ -376,6 +386,33 @@
             this.btnCalendar.ImageOptions.LargeImage = global::servis_project.Properties.Resources.today_32x321;
             this.btnCalendar.Name = "btnCalendar";
             this.btnCalendar.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.btnCalendar_ItemClick);
+            // 
+            // btnCallReport
+            // 
+            this.btnCallReport.Caption = "Talep Raporları";
+            this.btnCallReport.Id = 29;
+            this.btnCallReport.ImageOptions.Image = global::servis_project.Properties.Resources.wizard_16x161;
+            this.btnCallReport.ImageOptions.LargeImage = global::servis_project.Properties.Resources.wizard_32x321;
+            this.btnCallReport.Name = "btnCallReport";
+            this.btnCallReport.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.btnCallReport_ItemClick);
+            // 
+            // btnFrmReport
+            // 
+            this.btnFrmReport.Caption = "Firma Raporları";
+            this.btnFrmReport.Id = 30;
+            this.btnFrmReport.ImageOptions.Image = global::servis_project.Properties.Resources.wizard_16x163;
+            this.btnFrmReport.ImageOptions.LargeImage = global::servis_project.Properties.Resources.wizard_32x323;
+            this.btnFrmReport.Name = "btnFrmReport";
+            this.btnFrmReport.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.btnFrmReport_ItemClick);
+            // 
+            // btnStfReport
+            // 
+            this.btnStfReport.Caption = "Personel Raporları";
+            this.btnStfReport.Id = 31;
+            this.btnStfReport.ImageOptions.Image = global::servis_project.Properties.Resources.wizard_16x164;
+            this.btnStfReport.ImageOptions.LargeImage = global::servis_project.Properties.Resources.wizard_32x324;
+            this.btnStfReport.Name = "btnStfReport";
+            this.btnStfReport.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.btnStfReport_ItemClick);
             // 
             // ribbonPage1
             // 
@@ -406,7 +443,7 @@
             // ribbonPageGroup3
             // 
             this.ribbonPageGroup3.ItemLinks.Add(this.barButtonItem4);
-            this.ribbonPageGroup3.ItemLinks.Add(this.barButtonItem5);
+            this.ribbonPageGroup3.ItemLinks.Add(this.btnDpReport);
             this.ribbonPageGroup3.Name = "ribbonPageGroup3";
             // 
             // ribbonPage3
@@ -426,6 +463,7 @@
             // ribbonPageGroup5
             // 
             this.ribbonPageGroup5.ItemLinks.Add(this.btnStaffStatistics);
+            this.ribbonPageGroup5.ItemLinks.Add(this.btnStfReport);
             this.ribbonPageGroup5.Name = "ribbonPageGroup5";
             // 
             // ribbonPage4
@@ -445,6 +483,7 @@
             // ribbonPageGroup7
             // 
             this.ribbonPageGroup7.ItemLinks.Add(this.barButtonItem11);
+            this.ribbonPageGroup7.ItemLinks.Add(this.btnFrmReport);
             this.ribbonPageGroup7.Name = "ribbonPageGroup7";
             // 
             // ribbonPage5
@@ -477,7 +516,8 @@
             // ribbonPage8
             // 
             this.ribbonPage8.Groups.AddRange(new DevExpress.XtraBars.Ribbon.RibbonPageGroup[] {
-            this.ribbonPageGroup14});
+            this.ribbonPageGroup14,
+            this.ribbonPageGroup15});
             this.ribbonPage8.Name = "ribbonPage8";
             this.ribbonPage8.Text = "Destek Talepleri";
             // 
@@ -486,6 +526,11 @@
             this.ribbonPageGroup14.ItemLinks.Add(this.btnActiveCalls);
             this.ribbonPageGroup14.ItemLinks.Add(this.btnPassiveCalls);
             this.ribbonPageGroup14.Name = "ribbonPageGroup14";
+            // 
+            // ribbonPageGroup15
+            // 
+            this.ribbonPageGroup15.ItemLinks.Add(this.btnCallReport);
+            this.ribbonPageGroup15.Name = "ribbonPageGroup15";
             // 
             // ribbonPage6
             // 
@@ -507,7 +552,7 @@
             // 
             // ribbonPageGroup12
             // 
-            this.ribbonPageGroup12.ItemLinks.Add(this.barButtonItem23);
+            this.ribbonPageGroup12.ItemLinks.Add(this.btnAccount);
             this.ribbonPageGroup12.ItemLinks.Add(this.barButtonItem24);
             this.ribbonPageGroup12.Name = "ribbonPageGroup12";
             // 
@@ -520,7 +565,7 @@
             // 
             // ribbonPageGroup13
             // 
-            this.ribbonPageGroup13.ItemLinks.Add(this.barButtonItem25);
+            this.ribbonPageGroup13.ItemLinks.Add(this.btnReportWizard);
             this.ribbonPageGroup13.Name = "ribbonPageGroup13";
             // 
             // xtraTabbedMdiManager2
@@ -557,7 +602,7 @@
         private DevExpress.XtraBars.BarButtonItem btnNewDepartment;
         private DevExpress.XtraBars.BarButtonItem barButtonItem4;
         private DevExpress.XtraBars.Ribbon.RibbonPageGroup ribbonPageGroup3;
-        private DevExpress.XtraBars.BarButtonItem barButtonItem5;
+        private DevExpress.XtraBars.BarButtonItem btnDpReport;
         private DevExpress.XtraBars.BarButtonItem BtnStaffList;
         private DevExpress.XtraBars.Ribbon.RibbonPage ribbonPage3;
         private DevExpress.XtraBars.Ribbon.RibbonPageGroup ribbonPageGroup4;
@@ -587,10 +632,10 @@
         private DevExpress.XtraBars.BarButtonItem barButtonItem20;
         private DevExpress.XtraBars.BarButtonItem btnCurrency;
         private DevExpress.XtraBars.BarButtonItem btnMaps;
-        private DevExpress.XtraBars.BarButtonItem barButtonItem23;
+        private DevExpress.XtraBars.BarButtonItem btnAccount;
         private DevExpress.XtraBars.Ribbon.RibbonPageGroup ribbonPageGroup12;
         private DevExpress.XtraBars.BarButtonItem barButtonItem24;
-        private DevExpress.XtraBars.BarButtonItem barButtonItem25;
+        private DevExpress.XtraBars.BarButtonItem btnReportWizard;
         private DevExpress.XtraBars.Ribbon.RibbonPage ribbonPage7;
         private DevExpress.XtraBars.Ribbon.RibbonPageGroup ribbonPageGroup13;
         private DevExpress.XtraTabbedMdi.XtraTabbedMdiManager xtraTabbedMdiManager2;
@@ -599,6 +644,10 @@
         private DevExpress.XtraBars.Ribbon.RibbonPageGroup ribbonPageGroup14;
         private DevExpress.XtraBars.BarButtonItem btnPassiveCalls;
         private DevExpress.XtraBars.BarButtonItem btnCalendar;
+        private DevExpress.XtraBars.BarButtonItem btnCallReport;
+        private DevExpress.XtraBars.Ribbon.RibbonPageGroup ribbonPageGroup15;
+        private DevExpress.XtraBars.BarButtonItem btnFrmReport;
+        private DevExpress.XtraBars.BarButtonItem btnStfReport;
     }
 }
 

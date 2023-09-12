@@ -21,6 +21,8 @@ namespace servis_project.Forms
         DbServisEntities db = new DbServisEntities();
         private void FrmHomePage_Load(object sender, EventArgs e)
         {
+            // TODO: This line of code loads data into the 'dbServisDataSet.TblCalls' table. You can move, or remove it, as needed.
+            this.tblCallsTableAdapter.Fill(this.dbServisDataSet.TblCalls);
             gridControl1.DataSource = (from x in db.TblTasks
                                        select new
                                        {
@@ -71,6 +73,7 @@ namespace servis_project.Forms
 
             chartControl1.Series["Series 1"].Points.AddPoint("Aktif Çağrılar", active_calls);
             chartControl1.Series["Series 1"].Points.AddPoint("Pasif Görevler", passive_calls);
+            
         }
     }
 }

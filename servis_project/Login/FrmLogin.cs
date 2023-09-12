@@ -87,5 +87,10 @@ namespace servis_project.Login
                 XtraMessageBox.Show("Hatalı Kullanıcı Adı veya Şifre");
             }
         }
+
+        private void hyperlinkLabelControl3_Click(object sender, EventArgs e)
+        {
+            System.Diagnostics.Process.Start("https://localhost:44345/Login/");
+        }
     }
 }

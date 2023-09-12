@@ -34,6 +34,7 @@
             this.pictureEdit1 = new DevExpress.XtraEditors.PictureEdit();
             this.labelControl1 = new DevExpress.XtraEditors.LabelControl();
             this.panel2 = new System.Windows.Forms.Panel();
+            this.pictureEdit4 = new DevExpress.XtraEditors.PictureEdit();
             this.hyperlinkLabelControl3 = new DevExpress.XtraEditors.HyperlinkLabelControl();
             this.hyperlinkLabelControl2 = new DevExpress.XtraEditors.HyperlinkLabelControl();
             this.hyperlinkLabelControl1 = new DevExpress.XtraEditors.HyperlinkLabelControl();
@@ -46,17 +47,16 @@
             this.panel3 = new System.Windows.Forms.Panel();
             this.pictureEdit2 = new DevExpress.XtraEditors.PictureEdit();
             this.txtMail = new DevExpress.XtraEditors.TextEdit();
-            this.pictureEdit4 = new DevExpress.XtraEditors.PictureEdit();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureEdit1.Properties)).BeginInit();
             this.panel2.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureEdit4.Properties)).BeginInit();
             this.panel4.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureEdit3.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtPassword.Properties)).BeginInit();
             this.panel3.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureEdit2.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtMail.Properties)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureEdit4.Properties)).BeginInit();
             this.SuspendLayout();
             // 
             // panel1
@@ -77,12 +77,12 @@
             this.labelControl3.Appearance.ForeColor = System.Drawing.SystemColors.ButtonFace;
             this.labelControl3.Appearance.Options.UseFont = true;
             this.labelControl3.Appearance.Options.UseForeColor = true;
-            this.labelControl3.Location = new System.Drawing.Point(44, 394);
+            this.labelControl3.Location = new System.Drawing.Point(33, 394);
             this.labelControl3.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.labelControl3.Name = "labelControl3";
-            this.labelControl3.Size = new System.Drawing.Size(205, 19);
+            this.labelControl3.Size = new System.Drawing.Size(220, 19);
             this.labelControl3.TabIndex = 8;
-            this.labelControl3.Text = "V 1.4 Tüm Hakları Saklıdır";
+            this.labelControl3.Text = "V 1.4.2 Tüm Hakları Saklıdır";
             // 
             // pictureEdit1
             // 
@@ -127,6 +127,20 @@
             this.panel2.Size = new System.Drawing.Size(459, 420);
             this.panel2.TabIndex = 5;
             // 
+            // pictureEdit4
+            // 
+            this.pictureEdit4.EditValue = ((object)(resources.GetObject("pictureEdit4.EditValue")));
+            this.pictureEdit4.Location = new System.Drawing.Point(427, -1);
+            this.pictureEdit4.Name = "pictureEdit4";
+            this.pictureEdit4.Properties.Appearance.BackColor = System.Drawing.Color.Transparent;
+            this.pictureEdit4.Properties.Appearance.Options.UseBackColor = true;
+            this.pictureEdit4.Properties.BorderStyle = DevExpress.XtraEditors.Controls.BorderStyles.NoBorder;
+            this.pictureEdit4.Properties.ShowCameraMenuItem = DevExpress.XtraEditors.Controls.CameraMenuItemVisibility.Auto;
+            this.pictureEdit4.Properties.SizeMode = DevExpress.XtraEditors.Controls.PictureSizeMode.Stretch;
+            this.pictureEdit4.Size = new System.Drawing.Size(32, 32);
+            this.pictureEdit4.TabIndex = 8;
+            this.pictureEdit4.Click += new System.EventHandler(this.pictureEdit4_Click);
+            // 
             // hyperlinkLabelControl3
             // 
             this.hyperlinkLabelControl3.Location = new System.Drawing.Point(279, 393);
@@ -134,6 +148,7 @@
             this.hyperlinkLabelControl3.Size = new System.Drawing.Size(64, 16);
             this.hyperlinkLabelControl3.TabIndex = 7;
             this.hyperlinkLabelControl3.Text = "Web Paneli";
+            this.hyperlinkLabelControl3.Click += new System.EventHandler(this.hyperlinkLabelControl3_Click);
             // 
             // hyperlinkLabelControl2
             // 
@@ -274,20 +289,6 @@
             this.txtMail.TabIndex = 0;
             this.txtMail.Click += new System.EventHandler(this.txtMail_Click);
             // 
-            // pictureEdit4
-            // 
-            this.pictureEdit4.EditValue = ((object)(resources.GetObject("pictureEdit4.EditValue")));
-            this.pictureEdit4.Location = new System.Drawing.Point(427, -1);
-            this.pictureEdit4.Name = "pictureEdit4";
-            this.pictureEdit4.Properties.Appearance.BackColor = System.Drawing.Color.Transparent;
-            this.pictureEdit4.Properties.Appearance.Options.UseBackColor = true;
-            this.pictureEdit4.Properties.BorderStyle = DevExpress.XtraEditors.Controls.BorderStyles.NoBorder;
-            this.pictureEdit4.Properties.ShowCameraMenuItem = DevExpress.XtraEditors.Controls.CameraMenuItemVisibility.Auto;
-            this.pictureEdit4.Properties.SizeMode = DevExpress.XtraEditors.Controls.PictureSizeMode.Stretch;
-            this.pictureEdit4.Size = new System.Drawing.Size(32, 32);
-            this.pictureEdit4.TabIndex = 8;
-            this.pictureEdit4.Click += new System.EventHandler(this.pictureEdit4_Click);
-            // 
             // FrmLogin
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
@@ -307,13 +308,13 @@
             ((System.ComponentModel.ISupportInitialize)(this.pictureEdit1.Properties)).EndInit();
             this.panel2.ResumeLayout(false);
             this.panel2.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureEdit4.Properties)).EndInit();
             this.panel4.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.pictureEdit3.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtPassword.Properties)).EndInit();
             this.panel3.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.pictureEdit2.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtMail.Properties)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureEdit4.Properties)).EndInit();
             this.ResumeLayout(false);
 
         }

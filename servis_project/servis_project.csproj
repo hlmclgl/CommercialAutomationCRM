@@ -12,6 +12,21 @@
     <FileAlignment>512</FileAlignment>
     <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
     <Deterministic>true</Deterministic>
+    <PublishUrl>publish\</PublishUrl>
+    <Install>true</Install>
+    <InstallFrom>Disk</InstallFrom>
+    <UpdateEnabled>false</UpdateEnabled>
+    <UpdateMode>Foreground</UpdateMode>
+    <UpdateInterval>7</UpdateInterval>
+    <UpdateIntervalUnits>Days</UpdateIntervalUnits>
+    <UpdatePeriodically>false</UpdatePeriodically>
+    <UpdateRequired>false</UpdateRequired>
+    <MapFileExtensions>true</MapFileExtensions>
+    <ApplicationRevision>0</ApplicationRevision>
+    <ApplicationVersion>1.0.0.%2a</ApplicationVersion>
+    <IsWebBootstrapper>false</IsWebBootstrapper>
+    <UseApplicationTrust>false</UseApplicationTrust>
+    <BootstrapperEnabled>true</BootstrapperEnabled>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
     <PlatformTarget>AnyCPU</PlatformTarget>
@@ -41,11 +56,15 @@
     <Reference Include="DevExpress.DataAccess.v22.1, Version=22.1.6.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
     <Reference Include="DevExpress.DataAccess.v22.1.UI, Version=22.1.6.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
     <Reference Include="DevExpress.Drawing.v22.1, Version=22.1.6.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
+    <Reference Include="DevExpress.Images.v22.1, Version=22.1.6.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
     <Reference Include="DevExpress.Map.v22.1.Core, Version=22.1.6.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
     <Reference Include="DevExpress.Office.v22.1.Core, Version=22.1.6.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
     <Reference Include="DevExpress.PivotGrid.v22.1.Core, Version=22.1.6.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
     <Reference Include="DevExpress.Printing.v22.1.Core, Version=22.1.6.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
     <Reference Include="DevExpress.RichEdit.v22.1.Core, Version=22.1.6.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
+    <Reference Include="DevExpress.Snap.v22.1, Version=22.1.6.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.Snap.v22.1.Core, Version=22.1.6.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
+    <Reference Include="DevExpress.Snap.v22.1.Extensions, Version=22.1.6.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
     <Reference Include="DevExpress.Sparkline.v22.1.Core, Version=22.1.6.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
     <Reference Include="DevExpress.TreeMap.v22.1.Core, Version=22.1.6.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
     <Reference Include="DevExpress.Utils.v22.1, Version=22.1.6.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
@@ -94,6 +113,11 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="DbServisDataSet.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>DbServisDataSet.xsd</DependentUpon>
+    </Compile>
     <Compile Include="Entity\Model1.Context.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
@@ -138,6 +162,12 @@
     </Compile>
     <Compile Include="Form1.Designer.cs">
       <DependentUpon>Form1.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\FrmAccount.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\FrmAccount.Designer.cs">
+      <DependentUpon>FrmAccount.cs</DependentUpon>
     </Compile>
     <Compile Include="Forms\FrmActiveCalls.cs">
       <SubType>Form</SubType>
@@ -198,6 +228,12 @@
     </Compile>
     <Compile Include="Forms\FrmDepartments.Designer.cs">
       <DependentUpon>FrmDepartments.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\FrmDpReport.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\FrmDpReport.Designer.cs">
+      <DependentUpon>FrmDpReport.cs</DependentUpon>
     </Compile>
     <Compile Include="Forms\FrmFirms.cs">
       <SubType>Form</SubType>
@@ -306,6 +342,9 @@
     <EmbeddedResource Include="Form1.resx">
       <DependentUpon>Form1.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Forms\FrmAccount.resx">
+      <DependentUpon>FrmAccount.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Forms\FrmActiveCalls.resx">
       <DependentUpon>FrmActiveCalls.cs</DependentUpon>
     </EmbeddedResource>
@@ -335,6 +374,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Forms\FrmDepartments.resx">
       <DependentUpon>FrmDepartments.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\FrmDpReport.resx">
+      <DependentUpon>FrmDpReport.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Forms\FrmFirms.resx">
       <DependentUpon>FrmFirms.cs</DependentUpon>
@@ -402,6 +444,17 @@
       <Generator>EntityModelCodeGenerator</Generator>
       <LastGenOutput>Model1.Designer.cs</LastGenOutput>
     </EntityDeploy>
+    <None Include="DbServisDataSet.xsc">
+      <DependentUpon>DbServisDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="DbServisDataSet.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>DbServisDataSet.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="DbServisDataSet.xss">
+      <DependentUpon>DbServisDataSet.xsd</DependentUpon>
+    </None>
     <None Include="Entity\Model1.edmx.diagram">
       <DependentUpon>Model1.edmx</DependentUpon>
     </None>
@@ -790,6 +843,36 @@
       <DependentUpon>Model1.edmx</DependentUpon>
       <LastGenOutput>Model1.cs</LastGenOutput>
     </Content>
+    <None Include="Resources\wizard_16x166.png" />
+    <None Include="Resources\wizard_32x326.png" />
+    <None Include="Resources\bopermission_16x161.png" />
+    <None Include="Resources\bopermission_32x321.png" />
+    <None Include="Resources\bouser_16x162.png" />
+    <None Include="Resources\bouser_32x322.png" />
+    <None Include="Resources\today_16x162.png" />
+    <None Include="Resources\today_32x322.png" />
+    <None Include="Resources\geopointmap_16x161.png" />
+    <None Include="Resources\geopointmap_32x321.png" />
+    <None Include="Resources\currency_16x165.png" />
+    <None Include="Resources\currency_32x326.png" />
+    <None Include="Resources\currency_16x164.png" />
+    <None Include="Resources\currency_32x325.png" />
+    <None Include="Resources\news_16x161.png" />
+    <None Include="Resources\news_32x321.png" />
+    <None Include="Resources\youtube_16x161.png" />
+    <None Include="Resources\youtube_32x322.png" />
+    <None Include="Resources\calculatenow_16x16.png" />
+    <None Include="Resources\calculatenow_32x32.png" />
+    <None Include="Resources\wizard_16x165.png" />
+    <None Include="Resources\wizard_32x325.png" />
+    <None Include="Resources\wizard_16x164.png" />
+    <None Include="Resources\wizard_32x324.png" />
+    <None Include="Resources\wizard_16x163.png" />
+    <None Include="Resources\wizard_32x323.png" />
+    <None Include="Resources\wizard_16x162.png" />
+    <None Include="Resources\wizard_32x322.png" />
+    <None Include="Resources\wizard_16x161.png" />
+    <None Include="Resources\wizard_32x321.png" />
     <None Include="Resources\today_16x161.png" />
     <None Include="Resources\today_32x321.png" />
     <None Include="Resources\calendar_16x16.png" />
@@ -817,6 +900,18 @@
   </ItemGroup>
   <ItemGroup>
     <Service Include="{508349B6-6B84-4DF5-91F0-309BEEBAD82D}" />
+  </ItemGroup>
+  <ItemGroup>
+    <BootstrapperPackage Include=".NETFramework,Version=v4.8">
+      <Visible>False</Visible>
+      <ProductName>Microsoft .NET Framework 4.8 %28x86 and x64%29</ProductName>
+      <Install>true</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Framework.3.5.SP1">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5 SP1</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

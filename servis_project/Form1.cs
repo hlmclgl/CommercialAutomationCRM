@@ -204,5 +204,62 @@ namespace servis_project
             Forms.FrmCalendar frmCalendar = new Forms.FrmCalendar();
             frmCalendar.Show();
         }
+
+        Forms.FrmDpReport frm12;
+        private void btnDpReport_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
+        {
+            if (frm12 == null || frm12.IsDisposed)
+            {
+                frm12 = new Forms.FrmDpReport();
+                frm12.MdiParent = this;
+                frm12.Show();
+            }
+        }
+
+        private void btnReportWizard_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
+        {
+            if (frm12 == null || frm12.IsDisposed)
+            {
+                frm12 = new Forms.FrmDpReport();
+                frm12.MdiParent = this;
+                frm12.Show();
+            }
+        }
+
+        private void btnStfReport_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
+        {
+            if (frm12 == null || frm12.IsDisposed)
+            {
+                frm12 = new Forms.FrmDpReport();
+                frm12.MdiParent = this;
+                frm12.Show();
+            }
+        }
+
+        private void btnFrmReport_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
+        {
+            if (frm12 == null || frm12.IsDisposed)
+            {
+                frm12 = new Forms.FrmDpReport();
+                frm12.MdiParent = this;
+                frm12.Show();
+            }
+        }
+
+        private void btnCallReport_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
+        {
+            if (frm12 == null || frm12.IsDisposed)
+            {
+                frm12 = new Forms.FrmDpReport();
+                frm12.MdiParent = this;
+                frm12.Show();
+            }
+        }
+
+        private void btnAccount_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
+        {
+            Forms.FrmAccount frmAccount = new Forms.FrmAccount();
+            frmAccount.Show();
+        }
     }
 }

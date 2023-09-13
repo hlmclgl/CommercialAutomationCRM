@@ -36,13 +36,15 @@ namespace servis_project.Forms
             //Bugün tamamlanan görevler
             DateTime today = DateTime.Parse(DateTime.Now.ToShortDateString());
             //MessageBox.Show(today.ToString());
-            gridControl4.DataSource = (from x in db.TblTaskDetails
+            gridControl4.DataSource = (from x in db.TblTasks
                                        select new
                                        {
-                                           Görev = x.TblTasks.Description,
+                                           
                                            x.Description,
+                                           x.Status,
                                            x.Date
                                        }).Where(y => y.Date == today).ToList();
+            gridView4.Columns["Status"].Visible = false;
 
 
             //Aktif çağrı listesi

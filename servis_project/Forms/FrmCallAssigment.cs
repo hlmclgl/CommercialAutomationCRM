@@ -1,4 +1,5 @@
-﻿using servis_project.Entity;
+﻿using DevExpress.XtraEditors;
+using servis_project.Entity;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -50,6 +51,8 @@ namespace servis_project.Forms
             data.Date = Convert.ToDateTime(txtDate.Text);
             data.CallStaff = int.Parse(lookUpEdit1.EditValue.ToString());
             db.SaveChanges();
+            XtraMessageBox.Show("Destek talebi ilgili personele iletildi.", "Bilgi", MessageBoxButtons.OK, MessageBoxIcon.Information);
+            this.Hide();
         }
     }
 }

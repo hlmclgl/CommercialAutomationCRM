@@ -331,6 +331,7 @@
             this.Controls.Add(this.btnCancel);
             this.Controls.Add(this.panelControl1);
             this.Name = "FrmCallAssigment";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Talep Atama Sayfası";
             this.Load += new System.EventHandler(this.FrmCallAssigment_Load);
             ((System.ComponentModel.ISupportInitialize)(this.panelControl1)).EndInit();

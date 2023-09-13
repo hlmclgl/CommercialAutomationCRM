@@ -27,8 +27,11 @@ namespace servis_project.Forms
                                        {
                                            x.ID,
                                            x.Description,
+                                           x.Status,
                                            x.Date
-                                       }).ToList();
+                                       }).Where(y=>y.Status == true).ToList();
+            
+            gridView1.Columns["Status"].Visible = false;
         }
     }
 }

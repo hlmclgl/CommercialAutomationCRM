@@ -58,6 +58,7 @@
             this.ClientSize = new System.Drawing.Size(982, 383);
             this.Controls.Add(this.gridControl1);
             this.Name = "FrmActiveTasks";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Personel Aktif Görevleri";
             this.Load += new System.EventHandler(this.FrmActiveTasks_Load);
             ((System.ComponentModel.ISupportInitialize)(this.gridControl1)).EndInit();

@@ -32,6 +32,7 @@
             this.btnCancel = new DevExpress.XtraEditors.SimpleButton();
             this.btnAdd = new DevExpress.XtraEditors.SimpleButton();
             this.panelControl1 = new DevExpress.XtraEditors.PanelControl();
+            this.txtClock = new DevExpress.XtraEditors.TextEdit();
             this.labelControl5 = new DevExpress.XtraEditors.LabelControl();
             this.pictureEdit5 = new DevExpress.XtraEditors.PictureEdit();
             this.labelControl3 = new DevExpress.XtraEditors.LabelControl();
@@ -43,9 +44,9 @@
             this.pictureEdit1 = new DevExpress.XtraEditors.PictureEdit();
             this.txtDesc = new DevExpress.XtraEditors.MemoEdit();
             this.txtDate = new DevExpress.XtraEditors.DateEdit();
-            this.txtClock = new DevExpress.XtraEditors.TextEdit();
             ((System.ComponentModel.ISupportInitialize)(this.panelControl1)).BeginInit();
             this.panelControl1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.txtClock.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureEdit5.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureEdit3.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureEdit2.Properties)).BeginInit();
@@ -54,7 +55,6 @@
             ((System.ComponentModel.ISupportInitialize)(this.txtDesc.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtDate.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtDate.Properties.CalendarTimeProperties)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.txtClock.Properties)).BeginInit();
             this.SuspendLayout();
             // 
             // btnCancel
@@ -102,6 +102,15 @@
             this.panelControl1.Name = "panelControl1";
             this.panelControl1.Size = new System.Drawing.Size(714, 451);
             this.panelControl1.TabIndex = 19;
+            // 
+            // txtClock
+            // 
+            this.txtClock.EditValue = "";
+            this.txtClock.Location = new System.Drawing.Point(180, 72);
+            this.txtClock.Margin = new System.Windows.Forms.Padding(4);
+            this.txtClock.Name = "txtClock";
+            this.txtClock.Size = new System.Drawing.Size(504, 22);
+            this.txtClock.TabIndex = 31;
             // 
             // labelControl5
             // 
@@ -238,15 +247,6 @@
             this.txtDate.Size = new System.Drawing.Size(504, 22);
             this.txtDate.TabIndex = 25;
             // 
-            // txtClock
-            // 
-            this.txtClock.EditValue = "";
-            this.txtClock.Location = new System.Drawing.Point(180, 72);
-            this.txtClock.Margin = new System.Windows.Forms.Padding(4);
-            this.txtClock.Name = "txtClock";
-            this.txtClock.Size = new System.Drawing.Size(504, 22);
-            this.txtClock.TabIndex = 31;
-            // 
             // FrmCallDetailEntry
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
@@ -256,11 +256,13 @@
             this.Controls.Add(this.btnAdd);
             this.Controls.Add(this.panelControl1);
             this.Name = "FrmCallDetailEntry";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Talep Detayları Düzenleme Sayfası";
             this.Load += new System.EventHandler(this.FrmCallDetailEntry_Load);
             ((System.ComponentModel.ISupportInitialize)(this.panelControl1)).EndInit();
             this.panelControl1.ResumeLayout(false);
             this.panelControl1.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.txtClock.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureEdit5.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureEdit3.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureEdit2.Properties)).EndInit();
@@ -269,7 +271,6 @@
             ((System.ComponentModel.ISupportInitialize)(this.txtDesc.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtDate.Properties.CalendarTimeProperties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtDate.Properties)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.txtClock.Properties)).EndInit();
             this.ResumeLayout(false);
 
         }

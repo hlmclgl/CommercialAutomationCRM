@@ -59,6 +59,7 @@
             this.ClientSize = new System.Drawing.Size(1482, 535);
             this.Controls.Add(this.gridControl1);
             this.Name = "FrmActiveCalls";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Aktif Destek Talepleri";
             this.Load += new System.EventHandler(this.FrmActiveCalls_Load);
             ((System.ComponentModel.ISupportInitialize)(this.gridControl1)).EndInit();

@@ -62,6 +62,7 @@
             this.ClientSize = new System.Drawing.Size(982, 383);
             this.Controls.Add(this.gridControl1);
             this.Name = "FrmCallList";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Destek Talepleri";
             this.Load += new System.EventHandler(this.FrmCallList_Load);
             ((System.ComponentModel.ISupportInitialize)(this.gridControl1)).EndInit();

@@ -85,7 +85,7 @@ Here're some of the project's best features:
 *   User-Friendly Interface
 *   Role-Based Authorization
 
-  
+<p>These features collectively aim to enhance operational efficiency, transparency, and management capabilities for modern businesses using V-CAMS.</p>
   
 <h2>💻 Built with</h2>
 

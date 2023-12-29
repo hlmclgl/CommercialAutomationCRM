@@ -10,11 +10,13 @@
 
 <h2>V-CAMS: Redefine Your Business</h2>
 
-<p id="description">V-CAMS is a comprehensive automation platform developed for your business needs. This platform offers solutions across a wide range from personnel management to department organization and tracking of serviced companies. Among its features are; adding personnel and departments analyzing efficiency with visual statistics and assessing the performance of serviced companies. Additionally the tool menu provided by V-CAMS is equipped with features such as a calculator news exchange rates maps and a calendar designed to further streamline your workflow and simplify daily tasks. Moreover through its web component you can establish quick and effective communication with the companies you support. V-CAMS is designed to meet the requirements of modern businesses. With this platform you can manage your business processes more organized transparently and efficiently elevating your business to the next level.</p>
+<p id="description">V-CAMS is a comprehensive automation platform developed for your business needs. This platform offers solutions across a wide range from personnel management to department organization and tracking of serviced companies. Among its features are; adding personnel and departments analyzing efficiency with visual statistics and assessing the performance of serviced companies.</p>
+<p>Additionally the tool menu provided by V-CAMS is equipped with features such as a calculator news exchange rates maps and a calendar designed to further streamline your workflow and simplify daily tasks. Moreover through its web component you can establish quick and effective communication with the companies you support.</p>
+<p> V-CAMS is designed to meet the requirements of modern businesses. With this platform you can manage your business processes more organized transparently and efficiently elevating your business to the next level.</p>
 
 <h2>🚀 Demo</h2>
 
-[More Detailed Youtube Video ](https://www.youtube.com/watch?v=gOAvJ5WEXsk&ab_channel=AhmetHilmi%C3%87ilo%C4%9Flu)
+[More Detailed Youtube Video ](https://youtu.be/9-2QvQJg4mg)
 
 https://github.com/hlmclgl/ARISE/assets/77545449/9f27f779-ac13-46c6-b250-b7caf5258155
 

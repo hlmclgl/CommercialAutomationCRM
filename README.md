@@ -18,7 +18,6 @@
 
 [More Detailed Youtube Video ](https://www.youtube.com/watch?v=9-2QvQJg4mg&t=407s)
 
-https://github.com/hlmclgl/ARISE/assets/77545449/9f27f779-ac13-46c6-b250-b7caf5258155
 
 <h2>Project Screenshots:</h2>
 
